@@ -1,26 +1,42 @@
 # Assignments
 
----
-### Assignment 1
-# 1 Are we safe ? (P1, P2, M1, D1)
+## Assignment 1: Are we safe ?
+
 Phase 1: an overview of current network security threats and how to protect against them.
-P1: describe how networks can be attacked
-D1: discuss recent network threats
-P2: describe how networked systems can be protected [IE2]
-M1: explain the operation of different intruder detection systems
 
----
-### Assignment 2
-# 2 What's best ? (P3, M2, D2)
+* P1: Describe how networks can be attacked.
+  * Describe 2 methods in brief using which a network can be attacked.
+  * Length: A half page long description at minimum.
+  * Evidence: Report containing description.
+* D1: Discuss recent network threats.
+  * Research and find any 2 network threats that emerged on 2015 or later.
+  * Cross-verify the selected network threat with your mentor before starting the assignment.
+  * Length: A page long description of each network at minimum.
+  * Evidence: Report containing research and description
+* P2: Describe how networked systems can be protected [IE2].
+  * Provide suggested solutions to the individual threats discussed in D1.
+  * Description should be meaningful and to the point.
+  * Length: A half page long description at minimum.
+  * Evidence: Report containing description.
+* M1: Explain the operation of different **Intruder Detection Systems** (IDS).
+  * Research and Install a Host Based IDS on your system.
+    * Eg: Snort, Suricata, Bro, Kismet, OSSEC, Samhain, OpenDLP
+  * Document the process of operation of any IDS selected.
+  * Length: A 2 page extensive report describing various operations of an IDS
+  * Evidence: Report and Presentation.
+
+## Assignment 2: What's best ?
+
 Phase 2: how to minimise risks.
-P3: explain what an organisation can do to minimise security breaches in networked systems [SM4]
-M2: suggest how users can be authenticated to gain access to a networked system
-D2: compare the security benefits of different cryptography techniques.
 
----
-### Assignment 3
-# 3 Start installing. (P4, P5, M3)
+* P3: Explain what an organisation can do to minimise security breaches in networked systems [SM4].
+* M2: Suggest how users can be authenticated to gain access to a networked system.
+* D2: Compare the security benefits of different cryptography techniques.
+
+## Assignment 3: Start installing
+
 Phase 3: configure and test network security hardware/software.
-P4: plan procedures to secure a network
-P5: configure a networked device or specialist software to improve the security of a network.
-M3: report on the similarities and differences between securing wireless and wired networked systems.
+
+* P4: Plan procedures to secure a network.
+* P5: Configure a networked device or specialist software to improve the security of a network.
+* M3: Report on the similarities and differences between securing wireless and wired networked systems.

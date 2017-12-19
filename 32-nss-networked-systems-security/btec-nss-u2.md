@@ -77,3 +77,17 @@ The survey usually involves a site visit to test for RF interference, and to ide
 
 ### WPA2 Enterprise
 - Supports user grouping
+
+# IDS
+
+
+
+
+
+
+
+
+
+# External Links
+
+[Host Based IDS](https://www.alienvault.com/blogs/security-essentials/open-source-intrusion-detection-tools-a-quick-overview)
