@@ -1,0 +1,28 @@
+Commands
+
+- Basic Linux Commands
+  - Make Directory - mkdir
+  - Change Directory - cd
+    - Home ~
+    - Root /
+  - List files - ls
+  - Long Listing - ll
+  - Manual Page - man
+  - Change File permissions - chmod
+  - Copy - cp
+  - Move & Rename - mv
+- Basic Network Commands
+  - IFCONFIG / IPCONFIG / IWCONFIG - Dipesh
+  - PING - Manju
+  - TRACEROUTE - Ranjeet
+  - NETSTAT - Rushma
+  - DIG - Bishesh
+  - NSLOOKUP - Biplov
+  - ROUTE - Prakash
+  - HOST - Bijay
+  - ARP - AVI
+  - NMAP - Trilochan
+  - ETHTOOL
+  - IWCONFIG
+  - HOSTNAME
+  - http://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/

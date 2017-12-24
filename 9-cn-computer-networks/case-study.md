@@ -1,0 +1,33 @@
+Case Studies
+
+- Topics
+  - Request Response Handling in Basic Client Server Architecture - Bijay
+  - Live Streaming in Youtube - Prakash.
+  - Request Response Handling in E-commerce Network. -Bishesh
+  - Cellular / Mobile Network. - Dipesh
+    - https://en.wikipedia.org/wiki/Cellular_network
+    - http://www.quepublishing.com/articles/article.aspx?p=2021961
+    - https://www.lifewire.com/how-does-a-mobile-network-work-2373338
+  - Packet sniffing using wireshark. - Rushma
+  - Network mapping using NMAP. - Ranjeet
+    - https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/
+    - https://www.cyberciti.biz/networking/nmap-command-examples-tutorials/
+    - http://bencane.com/2013/02/25/10-nmap-commands-every-sysadmin-should-know/
+  - A/c Balance update process in Banking System Network. - Biplov
+    - https://gendal.me/2013/11/24/a-simple-explanation-of-how-money-moves-around-the-banking-system/
+  - Scaling Up a network of a growing business. - Manju
+  - Data centers management by Facebook/Google/Youtube.
+  - Multiplayer Online Gaming : SUPERCELL Case Study
+    - https://aws.amazon.com/solutions/case-studies/supercell/
+- Detailed Format
+  - Title Page
+  - Abstract
+  - Contents
+    - Introduction
+    - The Challenge.
+    - The Solution.
+    - The Result & Findings.
+    - Conclusions / Summary.
+  - Appendix
+    - Terminlogies
+    - Bibliography

@@ -1,0 +1,762 @@
+## BTEC - Unit 9
+
+# Computer Networks
+
+1. Know types of network systems and protocols
+1. Understand the key components used in networking
+1. Know the services provided by network systems
+1. Be able to make networked systems secure
+
+# 1 Know types of network systems and protocols
+  - Types of network
+    - Personal Area Network (PAN);
+    - Local area network (LAN)
+    - MAN
+    - Wide area network (WAN)
+    - Internet
+  - Logical and physical topologies
+    - star
+    - bus
+    - ring
+    - mesh
+    - tree; 
+  - How internet works ?
+    - Basic Client Server Architecture
+      - Client
+      - Server
+      - Request
+      - Response
+  - Network models
+    - OSI 7 layer,
+      - Application Layer
+        - Contains variety of protocols that are commonly used.
+        - One widely used application protocol is HTTP (HyperText Transfer Protocol)
+        - Which is the basis for the World Wide Web. 
+        - When a browser wants a Web page, it sends the name of the page it wants to the server hosting the page using HTTP. The server then sends the page back.
+        - Other application protocols are used for
+          - file transfer (FTP)
+          - electronic mail (SMTP)
+      - Presentation Layer
+        - Unlike the lower layers, which are mostly concerned with moving bits around, the presentation layer is concerned with the syntax and semantics of the information transmitted.
+        - In order to make it possible for computers with different internal data representations to communicate, the data structures to be exchanged can be defined in an abstract way, along with a standard encoding to be used ‘‘on the wire.’’
+        - Manages these abstract data structures
+        - Allows higher-level data structures (e.g., banking records) to be defined and exchanged.
+      - Session Layer
+        - The session layer allows users on different machines to establish sessions between them. 
+        - Sessions offer various services, such as:
+          - Dialog control (keeping track of whose turn it is to transmit),
+          - Token management (preventing two parties from attempting the same critical operation simultaneously), and 
+          - Synchronization (checkpointing long transmissions to allow them to pick up from where they left off in the event of a crash and subsequent recovery).
+        - Examples
+          - Session Maintenance in Banking Transactions
+          - E-commerce (Carts Data/info)
+          - User Sessions (Facebook)
+      - Transport Layer
+        - The basic function of the transport layer is
+          - to accept data from above it,
+          - split it up into smaller units if need be,
+          - pass these to the network layer, and
+          - ensure that the pieces all arrive correctly at the other end.
+        - This must be done efficiently and in a way that isolates the upper layers from the inevitable changes in the hardware technology over the course of time.
+        - The transport layer also determines
+          - what type of service to provide to
+            - the session layer, and,
+            - ultimately, to the users of the network.
+        - The most popular type of transport connection is
+          - an error-free point-to-point channel that delivers messages or bytes &
+          - in the order in which they were sent.
+        - However, other possible kinds of transport service exist, such as the transporting of isolated messages with no guarantee about the order of delivery, and the broadcasting of messages to multiple destinations.
+        - The type of service is determined when the connection is established.
+        - (As an aside, an error-free channel is completely impossible to achieve; what people really mean by this term is that the error rate is low enough to ignore in practice.)
+        - The transport layer is a true end-to-end layer;
+          - it carries data all the way from the source to the destination.
+        - In other words, a program on the source machine carries on a conversation with a similar program on the destination machine, using the message headers and control messages. In the lower layers, each protocols is between a machine and its immediate neighbors, and not between the ultimate source and destination machines, which may be separated by many routers.
+        - The difference between layers 1 through 3, which are chained, and layers 4 through 7, which are end-to-end.
+      - Network Layer
+        - The network layer controls the operation of the subnet.
+        - A key design issue is determining how packets are routed from source to destination. Routes can be based on static tables that are ‘‘wired into’’ the network and rarely changed, or more often they can be updated automatically to avoid failed components.
+        - They can also be determined at the start of each conversation, for example, a terminal session, such as a login to a remote machine.
+        - Finally, they can be highly dynamic, being determined anew for each packet to reflect the current network load.
+        - If too many packets are present in the subnet at the same time, they will get in one another’s way, forming bottlenecks.
+        - Handling congestion is also a responsibility of the network layer, in conjunction with higher layers that adapt the load they place on the network. More generally, the quality of service provided (delay, transit time, jitter, etc.) is also a network layer issue.
+        - When a packet has to travel from one network to another to get to its destination, many problems can arise.
+        - The addressing used by the second network may be different from that used by the first one.
+        - The second one may not accept the packet at all because it is too large. The protocols may differ, and so on.
+        - It is up to the network layer to overcome all these problems to allow heterogeneous networks to be interconnected.
+        - In broadcast networks, the routing problem is simple, so the network layer is often thin or even nonexistent.
+      - Data Link Layer
+        - The main task of the data link layer is to transform a raw transmission facility into a line that appears free of undetected transmission errors.
+        - It does so by masking the real errors so the network layer does not see them.
+        - It accomplishes this task by having the sender break up the input data into data frames (typically a few hundred or a few thousand bytes) and transmit the frames sequentially.
+        - If the service is reliable, the receiver confirms correct receipt of each frame by sending back an acknowledgement frame.
+        - Another issue that arises in the data link layer (and most of the higher layers as well) is how to keep a fast transmitter from drowning a slow receiver in data.
+        - Some traffic regulation mechanism may be needed to let the transmitter know when the receiver can accept more data.
+        - Broadcast networks have an additional issue in the data link layer: how to control access to the shared channel.
+        - A special sublayer of the data link layer, the medium access control sublayer, deals with this problem.
+      - Physical Layer
+        - The physical layer is concerned with transmitting raw bits over a communication channel.
+        - The design issues have to do with making sure that when one side sends a 1 bit it is received by the other side as a 1 bit, not as a 0 bit.
+        - Typical questions here are
+          - what electrical signals should be used to represent a 1 and a 0,
+          - how many nanoseconds a bit lasts,
+          - whether transmission may proceed simultaneously in both directions,
+          - how the initial connection is established,
+          - how it is torn down when both sides are finished,
+          - how many pins the network connector has, and what each pin is used for.
+        - These design issues largely deal with mechanical, electrical, and timing interfaces, as well as the physical transmission medium, which lies below the physical layer.
+    - TCP/IP
+      - Application Layer
+        - The TCP/IP model does not have session or presentation layers.
+        - No need for them was perceived. Instead, applications simply include any session and presentation functions that they require.
+        - Experience with the OSI model has proven this view correct: these layers are of little use to most applications.
+        - On top of the transport layer is the application layer.
+        - It contains all the higher- level protocols. Such As:
+          - 1. DNS (Domain Name Server) - Protocol
+          - 2. DHCP (Dynamic Host Control Protocol)
+          - 3. HTTP (Hyper Text Transfer Protocol)
+          - 4. FTP (File Transfer Protocol)
+          - 5. SMTP (Simple Mail Transfer Protocol)
+      - Transport Layer
+        - The layer above the internet layer in the TCP/IP model is now usually called the transport layer. 
+        - It is designed to allow peer entities on the source and destination hosts to carry on a conversation, just as in the OSI transport layer. 
+        - Two end-to-end transport protocols have been defined here.
+          - The first one, TCP (Transmission Control Protocol), is a reliable connection-oriented protocol that allows a byte stream originating on one machine to be delivered without error on any other machine in the internet.
+            - It segments the incoming byte stream into discrete messages and passes each one on to the internet layer.
+            - At the destination, the receiving TCP process reassembles the received messages into the output stream. 
+            - TCP also handles flow control to make sure a fast sender cannot swamp a slow receiver with more messages than it can handle.
+          - The second protocol in this layer, UDP (User Datagram Protocol), is
+            - an unreliable,
+            - connectionless protocol for applications that do not want TCP’s sequencing or flow control and wish to provide their own.
+        - It is also widely used for one-shot, client-server-type request-reply queries and applications in which prompt delivery is more important than accurate delivery, such as transmitting speech or video.
+      - Internet Layer
+        - The internet layer holds the whole architecture together.
+        - It roughly corresponds to the OSI network layer.
+        - Its job is to permit hosts to inject packets into any network and have them travel independently to the destination (potentially on a different network).
+        - They may even arrive in a completely different order than they were sent, in which case it is the job of higher layers to rearrange them, if in-order delivery is desired.
+        - Note that ‘‘internet’’ is used here in a generic sense, even though this layer is present in the Internet.
+        - The analogy here is with the (snail) mail system.
+          - A person can drop a sequence of international letters into a mailbox in one country, and with a little luck, most of them will be delivered to the correct address in the destination country.
+          - The letters will probably travel through one or more international mail gateways along the way, but this is transparent to the users.
+          - Furthermore, that each country (i.e., each network) has its own stamps, preferred envelope sizes, and delivery rules is hidden from the users.
+        - The internet layer defines an official packet format and protocol called IP
+        - (Internet Protocol), plus a companion protocol called ICMP (Internet Control Message Protocol) that helps it function.
+        - The job of the internet layer is to deliver IP packets where they are supposed to go. Packet routing is clearly a major issue here, as is congestion (though IP has not proven effective at avoiding congestion).
+      - Physical Layer
+        - All these requirements led to the choice of a packet-switching network based on a connectionless layer that runs across different networks.
+        - The lowest layer in the model, the link layer describes what links such as serial lines and classic Ethernet must do to meet the needs of this connectionless internet layer.
+        - It is not really a layer at all, in the normal sense of the term, but rather an interface between hosts and transmission links.
+        - Early material on the TCP/IP model has little to say about it.
+  - TCP/IP Layer and its protocols
+    - Application layer protocols
+      - 1. DNS (Domain Name Server) - Protocol
+        - DNS Lookup PROCESS
+          - Your computer asks your router for a DNS Record
+          - Your router asks your ISP for a DNS Record
+          - Your ISP asks the Root Name server for the Name Server.
+          - The Root server gives your ISP the Name server.
+          - Your ISP asks the Name server for a DNS record.
+          - The Name server gives you ISP the DNS Record.
+          - Your ISP gives your Router the DNS Record.
+          - Your Router gives your computer the DNS Record.
+        - DNS Management
+          - DNS management controls Domain Name System (DNS) server clusters. DNS data is typically deployed on multiple physical servers. The main purposes of DNS management software are: to reduce human error when editing complex and repetitive DNS data.
+        - DNS Flavours
+          - Generic
+            - .com
+            - .edu
+            - .gov
+            - .org
+            - .net
+          - Countries
+            - .np
+            - .in
+            - .uk
+            - .pk
+        - ICANN (Internet Corporation for Assigned Names and Numbers)
+          - ICANN was formed in 1998. It is a not-for-profit partnership of people from all over the world dedicated to keeping the Internet secure, stable and interoperable. It promotes competition and develops policy on the Internet’s unique identifiers.
+          - ICANN doesn’t control content on the Internet. It cannot stop spam and it doesn’t deal with access to the Internet. But through its coordination role of the Internet’s naming system, it does have an important impact on the expansion and evolution of the Internet.
+      - 2. DHCP (Dynamic Host Control Protocol)
+        - DHCP Server
+        - DHCP Lookup
+        - Issue:
+          - An issue that arises with automatic assignment of IP addresses from a pool is for how long an IP address should be allocated.
+          - If a host leaves the network and does not return its IP address to the DHCP server, that address will be permanently lost.
+          - After a period of time, many addresses may be lost.
+          - To prevent that from happening, IP address assignment may be for a fixed period of time, a technique called leasing.
+          - Just before the lease expires, the host must ask for a DHCP renewal.
+          - If it fails to make a request or the request is denied, the host may no longer use the IP address it was given earlier.
+      - 3. HTTP (Hyper Text Transfer Protocol)
+      - 4. FTP (File Transfer Protocol)
+      - 5. SMTP (Simple Mail Transfer Protocol)
+        - Simple Mail Transfer Protocol (SMTP) is an Internet standard for electronic mail (email) transmission.
+        - First defined by RFC 821 in 1982, it was last updated in 2008 with Extended SMTP additions by RFC 5321, which is the protocol in widespread use today.
+        - Although electronic mail servers and other mail transfer agents use SMTP to send and receive mail messages, user-level client mail applications typically use SMTP only for sending messages to a mail server for relaying.
+        - For retrieving messages, client applications usually use either IMAP or POP3.
+        - Internet Message Access Protocol
+        - SMTP communication between mail servers uses port 25.
+    - Transport Layer Protocols
+      - TCP
+      - UDP
+      - Similarities & Differences
+      - Packet Diagram
+      - RAW
+        - TCP is connection oriented – once a connection is established, data can be sent bidirectional. UDP is a simpler, connectionless Internet protocol. Multiple messages are sent as packets in chunks using UDP.
+    - Internet Layer Protocols
+      - IP
+      - ICMP
+  - Intranet & Extranet
+    - Intranet
+      - Intranet is a computer network system in which a specific organizational systems share information, computing services and operational systems with each other by using an Internet (IP) technology.
+      - This term basically refers to the network of a specific organization.
+      - You can also says it a private network.
+      - Authenticated users of the organization can access the database system, search engines, directory and can distribute documents and workflow.
+      - Employees can makes interactive communication in shape of chatting, audio and videoconferencing, groupware and teleconferencing.
+    - Extranet
+      - Extranet is a kind of computer network that allows the outside users to access the Intranet of organization.
+      - This network system is basically used for business to business (B2B) purposes.
+      - This system basically allows the outside users of an organization, like partners, suppliers, vendors and other stakeholders to remain in touch with the activities of organization.
+  - Multiplexing & De-Multiplexing
+    - Transport layer at the sender side receives data from different Applications , encapsulates every packet with a Transport Layer header and pass it on to the underlying Network Layer. This job of transport layer is known as Multiplexing.
+    - At the receiver's side, the transport gathers the data, examines it socket and passes the data to the correct Application. This is known as De-Multiplexing.
+    - Sockets are the door between Transport and Application Layer.  If you want to read about socket, visit this. Socket.  Let us take a very simple example that will make you clear with all these terms.
+    - Suppose that there are two houses. One is in India and Other is in America. In the house in India, lives a person James along with his 5 children. And in the house in America, lives a person Steve along with his 4 children. Now all 5 children of James write a letter to every children of Steve on every Sunday. Therefore total number of letters will be 20. Thus, all the children writes the letter , put them in envelopes and hand over it to James. Then James write source house address and the destination house address on the envelope and give it to the postal service of India. Now the postal service of India puts some other addresses corresponding to the country and delivers it to the America postal Service. The American Postal sees the destination address on the envelopes and will deliver those 20 letters to the Steve House. Steve collects the letter from the postman and after considering the name of his respective children on the envelopes, he gives the letter to each of them.
+    - In this example we have processes and the layers as:
+      - Processes = children
+      - Application Layer messages = envelopes
+      - Hosts = The two Houses
+      - Transport Layer Protocol = James and Steve
+      - Network Layer protocol = Postal Service
+    - When James collects all the letters from his children, he multiplexes all and encapsulates them with the respective children name on the letter and  house address and give it to the Indian postal service.
+    - On the receiving side, Steve collects all the letters from postal service of America and de-multiplexes them to see , which letter is for which child and delivers it respectively.
+  - Circuit Switching & Packet Switching
+  - Modes of Communication
+    - Simplex
+      - Simplex is one direction. A good example would be your keyboard to your CPU. The CPU never needs to send characters to the keyboard but the keyboard always sends characters to the CPU. In many cases, Computers almost always send characters to printers, but printers usually never send characters to computers (there are exceptions, some printers do talk back). Simplex requires only one lane (in the case of serial).
+    - Duplex
+      - Half Duplex
+        - Half-Duplex is like the dreaded "one lane" road you may have run into at construction sites. Only one direction will be allowed through at a time. Railroads have to deal with this scenario more often since it's cheaper to lay a single track. A dispatcher will hold a train up at one end of the single track until a train going the other direction goes through. The only example I could think of for Half-Duplex is actually a Parallel interface. Even though parallel is eight lanes, data travels through the lanes in the same direction at the same time but never in both directions at the same time. The IEEE-1284 allows printers to send messages to the computer. The printer cannot send these messages while the computer is sending characters but when the computer stops sending characters, then the printer can send messages back. It's kind of like some roads that head into downtown. In the morning, they're one way roads, allowing traffic to go into downtown. In the evening their one way roads, allowing traffic to head out of downtown. The only advantage that Half-Duplex would have is the single lane or single track is cheaper then the double lane or double track.
+      - Full Duplex
+        - Full-Duplex is like the ordinary two-lane highway. In some cases, where traffic is heavy enough, a railroad will decide to lay a double track to allow trains to pass in both directions. In communications, this is most common with networking. Our fiber optic hubs have two connectors on each port, one for each lane of a two-lane roadway. Full-Duplex fiber is two cables bundled or tied together to form the two-lane roadway. In 100Base-TX, the two lanes are housed in the same jacket. RS232 was also designed to handle Full-Duplex but some of our short haul modems and converters give the user the option to go Half-Duplex or Simplex to reduce the number of conductors needed to connect between them.
+  - Network protocols and standards:
+    - Types {eg:}
+      - TCP/IP (Transmission Control Protocol/Internet Protocol)
+        - TCP/IP is the basic communication language or protocol of the Internet.
+        - It can also be used as a communications protocol in a private network (either an intranet or an extranet).
+        - When you are set up with direct access to the Internet, your computer is provided with a copy of the
+        - TCP/IP program just as every other computer that you may send messages to or get information from also has a copy of TCP/IP.
+      - AppleTalk
+        - AppleTalk was a proprietary suite of networking protocols developed by Apple Inc. for their Macintosh computers.
+        - AppleTalk includes a number of features that allow local area networks to be connected with no prior setup or the need for a centralized router or server of any sort.
+        - Connected AppleTalk-equipped systems automatically assign addresses, update the distributed namespace, and configure any required inter-networking routing.
+        - It is a plug-n-play system.
+        - AppleTalk was released in 1985, and was the primary protocol used by Apple devices through the 1980s and 1990s.
+        - Versions were also released for the IBM PC and compatibles and the Apple IIGS. AppleTalk support was also available in most networked printers (especially laser printers), some file servers, and a number of routers.
+      - UDP
+      - 802.2, 
+      - 802.3, 
+      - FDDI, 
+      - 802.5;
+    - wireless technologies eg 
+      - 802.11, infrared, 
+      - Bluetooth, 
+      - 3G; 
+    - factors affecting range and speed of wireless technologies
+  - WAN technologies
+    - Frame relay
+    - MPLS
+      - What is MPLS?
+        - Multi-Protocol Label Switching is a method of ensuring packets of data get where they're supposed to, via a sensible route, and that packets are prioritised appropriately.
+        - Packets are labelled with one or more labels. As each packet passes through the MPLS network, labels may be added, replaced or stripped off. The network distributes information so that each switch knows what it is supposed to do if it encounters a particular label.
+      - The Benefits of MPLS Networks
+        - Improve Uptime 
+          - by sending data over an alternative path in less than 50 milliseconds (if one exists). MPLS also reduces the amount of manual intervention your network provider has to do to create a WAN, reducing the likelihood of human error bringing down your circuit.
+        - Create Scalable IP VPNs
+          - with MPLS it's easy to add an additional site to the VPN. There is no need to configure a complex mesh of tunnels, as is common with some traditional approaches.
+        - Improve User Experience
+          - by prioritising time-sensitive traffic such as VoIP. Multi-Protocol Label Switching offers multiple Classes of Service, enabling you to apply separate settings to different types of traffic.
+        - Improve Bandwidth Utilisation
+          - by putting multiple types of traffic on the same link, you can let high priority traffic borrow capacity from lower priority traffic streams whenever required. Conversely, when the lower priority traffic needs to burst beyond its usual amount of bandwidth, it can use any capacity that's not being used by higher priority services.
+        - Hide Network Complexity
+          - an MPLS connection between two sites can be configured to act like a long ethernet cable, with the hops involved hidden from view. This is sometimes known as VPLS (Virtual Private LAN Service).
+        - Reduce Network Congestion
+          - Sometimes the shortest path between two locations isn't the best one to take, as congestion has made it less attractive (at least for the time being). MPLS offers sophisticated traffic engineering options that enable traffic to be sent over non-standard paths. This can reduce latency (the delay in sending/receiving data). It also reduces congestion on the paths that have just been avoided as a result of traffic engineering.
+      - MPLS is particularly well suited for use in Carrier Networks and corporate Wide Area Networks
+        - The technology is particularly well-suited to use in corporate Wide Area Networks
+        - Multi-Protocol Label Switching is particularly useful for situations where...
+          - multiple types of traffic share a data connection, with some types of traffic requiring priority over others
+          - uptime is important, key locations have multiple connections so that alternative paths always exist
+          - network congestion occurs sometimes on some connections
+          - new sites will need to be able to connect to many different locations, while being entirely invisible to many other sites on the network.
+        - This is why MPLS is widely used by the major telecoms companies. It's also very popular with organisations that need a scalable WAN that can carry both voice (phone calls) and data.
+    - ATM
+      - ATM (asynchronous transfer mode) is a dedicated-connection switching technology that organizes digital data into 53-byte cell units and transmits them over a physical medium using digital signal technology.
+      - Individually, a cell is processed asynchronously relative to other related cells and is queued before being multiplexed over the transmission path.
+      - Because ATM is designed to be easily implemented by hardware (rather than software), faster processing and switch speeds are possible. 
+      - The prespecified bit rates are either 155.520 Mbps or 622.080 Mbps.
+      - Speeds on ATM networks can reach 10 Gbps.
+      - Along with Synchronous Optical Network (SONET) and several other technologies, ATM is a key component of broadband ISDN (BISDN).
+  - Network access methods
+    - CSMA
+    - Token passing; 
+
+# 2 Understand the key components used in networking
+
+  - Key components: 
+    - 1. Network devices
+    - 2. Interconnection devices
+    - 3. Connectors and Cabling
+    - 4. Software
+  - Network devices
+    - Introduction, Features and Functions of :
+      - Workstations
+      - Servers
+        "A computer or computer program which manages requests & access to a centralized resource or service in a network."
+        - Print Server
+        - Mail Server
+        - File Server
+        - Web Server
+          - A web server is a computer system that processes requests via HTTP, the basic network protocol used to distribute information on the World Wide Web.
+          - The term can refer to the entire system, or specifically to the software that accepts and supervises the HTTP requests.
+          - A Web server is a program that uses HTTP (Hypertext Transfer Protocol) to serve the files that form Web pages to users, in response to their requests, which are forwarded by their computers' HTTP clients.
+          - Dedicated computers and appliances may be referred to as Web servers as well.
+          - The process is an example of the client/server model.
+          - All computers that host Web sites must have Web server programs.
+          - Working Mechanism
+            - Browser Resolves the Domain Name to an IP Address
+              - Your web browser first needs to know which IP address the domain name www.quackit.comresolves to. If it doesn't already have this information stored in it's cache, it requests the information from one or more DNS servers (via the internet).
+              - The DNS server tells the browser which IP address the domain name resolves to (and therefore, where the website is located).
+            - Browser Requests the Full URL
+              - Now that the web browser knows which IP address the website is located at, it can request the full URL from the web server.
+            - Web Server sends the Requested Page
+              - The web server responds by sending back the requested page.
+              - If the page doesn't exist (or another error occurs), it will send back the appropriate error message.
+            - Browser Displays the Webpage
+              - Your web browser receives the page and renders it as required.
+          - Features
+            - Create one or more websites.
+            - Configure log file settings, including where the log files are saved, what data to include on the log files etc. (Log files can be used to analyse traffic etc)
+            - Configure website/directory security. For example, which user accounts are/aren't allowed to view the website, which IP addresses are/aren't allowed to view the website etc.
+            - Create an FTP site. An FTP site allows users to transfer files to and from the site.
+            - Create virtual directories, and map them to physical directories
+            - Configure/nominate custom error pages. This allows you to build and display user friendly error messages on your website. For example, you can specify which page is displayed when a user tries to access a page that doesn't exist (i.e. a 404 error).
+            - Specify default documents. Default documents are those that are displayed when no file name is specified. For example, if you open http://localhost, which file should be displayed? This is typically index.html or similar but it doesn't need to be.
+          - Some widely used webservers
+            - Apache
+              - The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows.
+              - The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+              - The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most popular web server on the Internet since April 1996.
+              - It has celebrated its 20th birthday as a project in February 2015.
+            - Apache-Tomcat Server
+            - Microsoft's Internet Information Server (IIS)
+              - Azure Server
+            - NGINX (pronounced engine X)
+            - Novell's NetWare server
+            - Google Web Server (GWS)
+            - IBM's family of Domino servers
+        - Proxy Server
+      - Network interface Cards / Controllers (NIC)
+        - A NIC is also known as
+          - Network interface controller (NIC)
+          - Network interface controller card
+          - Network card
+          - LAN card
+          - Network adapter
+          - Network adapter card (NAC).
+        - Types
+          - Ethernet NICs
+          - Wireless NICs
+        - Features
+          - A computer hardware component that allows a computer to connect to a network.
+          - Contains the electronic circuitry required to communicate in network.
+          - NICs may be used for both wired and wireless connections.
+          - Comes integrated with mother boards
+          - Provides the computer with a dedicated, full-time connection to a network.
+          - Personal computers and workstations on a local area network (LAN) typically contain a network interface card specifically designed for the LAN transmission technology.
+          -  The NIC is both a physical layer and data link layer device, as it provides physical access to a networking medium and, for IEEE 802 and similar networks, provides a low-level addressing system through the use of MAC addresses that are uniquely assigned to network interfaces.
+        - EXPLANATION
+          - In general, people refer to Ethernet-enabled cards are NICs. Wireless cards are sometimes called WNICs, but they are often just called wireless cards. However, the term "NIC" encompasses all of these items. While Ethernet ports and cards are less common than they once were, they are still important for enterprise infrastructure, and servers use them to control multiple connections and to handle a high volume of traffic.
+          - One NIC can handle a number of Ethernet connections by attaching a switch or router to it. While most people are used to standalone routers, many enterprise and server-grade routers are full servers attached to switches. In some cases, two or more NICs might be used to provide more throughput.
+          - Offices often use Ethernet connections for workstations and desktops. Ethernet cables are easier to configure than wireless cards, and they can provide better throughput in certain scenarios. As more offices move to cloud-based operations, Ethernet cables are likely to be used to prevent wireless channels from becoming congested.
+  - Interconnection devices: 
+    - Devices
+      - Hubs
+      - Router
+      - Switch
+      - Wireless Access Points
+    - Purposes, Features and Functions
+  - Connectors and cabling:
+    - Leased Line
+      - Features
+        - Private bidirectional communication line b/w 2 points upon rent.
+        - Dedicated, active connection.
+        - Connect Geographically distant units.
+        - Connection Rates
+          - Distance b/w points
+          - Speed Required
+          - Quality Ensured
+        - Premium internet connectivity
+        - Ethernet leased line, dedicated line, data circuit or private line
+      - Features Explanation
+        - A leased line is a private bidirectional or symmetric telecommunications line between two or more locations provided in exchange for a monthly rent. Sometimes known as a private circuit or data line in the UK.
+        - Unlike traditional PSTN lines it does not have a telephone number, each side of the line being permanently connected and "dedicated" to the other. Leased lines can be used for telephone, data or Internet services. Some are ringdown services, and some connect to a Private branch exchange or Router.
+        - Typically, leased lines are used by businesses to connect geographically distant offices. Unlike dial-up connections, a leased line is always active. The fee for the connection is a fixed monthly rate. The primary factors affecting the monthly fee are distance between end points and the speed of the circuit. Because the connection does not carry anybody else's communications, the carrier can assure a given level of quality.
+        - An Internet leased line is a premium internet connectivity product, normally delivered over fiber, which provides uncontended, symmetrical speeds, full-duplex. It is also known as an ethernet leased line, dedicated line, data circuit or private line.
+        - For example, a T-1 can be leased and provides a maximum transmission speed of 1.544 Mbit/s. The user can channelize the T-1 to separate the 24 DS0 circuits for voice communication, partial the T-1 for data and voice communications, or multiplex the channels into a single data circuit. Leased lines, as opposed to DSL, are being used by companies and individuals for Internet access because they afford faster data transfer rates and are cost-effective for heavy users of the Internet.
+      - Types
+        - Fibre Leased Lines
+          - Fibre Leased Lines provide a dedicated symmetric data connection by sending light over fibre optic cables. In reality, almost all leased lines use fibre for a major portion of route, particular the 'backhaul' element. However some leased lines use fibre all the way.
+          - If you've got a choice between Fibre and DSL, choose Fibre.
+          - Of all the types of leased line, Fibre leased lines offer the higest speeds.
+        - DSL Leased Lines
+          - DSL is used to provide other types of low-bandwidth leased lines. Leased lines are non-contended and symmetric, whereas most DSL connections are contended and asymmetric. However, it is possible to use a symmetric alternative to ADSL, called SDSL. This offers a higher upload speed than standard ADSL, allowing a symmetric connection to be formed.
+          - There's also a more recent version of ADSL called ADSL2+Annex M. This offers faster upload speed than traditional ADSL.It's not symmetric. However, by deliberately limiting your downstream connection, it's possible to provide symmetric connections of up to 3.5Mbps or below.
+          - ADSL and SDSL speeds drop the further you get from your exchange, so you may not be able to get the speed you want via a DSL leased line. Usually it's only used if a fibre leased line is not available.
+          - ADSL2+ Annex M and a download speed far below the capacity of the line. Most DSL services are contended. In other words, your traffic has to fight it out with other customers traffic when travelling between your local telephone exchange and your ISP's network. However, this is just a cost-driven business decision designed to reduce backhaul and IP transit costs. It is possible to get dedicated DSL connections.
+          - DSL speeds drop the further you are from your local telephone exchange. To counter this, it is possible to bond several DSL connections together to increase the maximum speeds available.
+        - MPLS Leased Lines
+          - These types of leased lines are becoming ever more popular.
+          - MPLS stands for Multi-Protocol Label Switching. It's a technology that's used for getting data from A to B by wrapping up the data (encapsulating it), sticking one or more labels on it, then deciding where stuff should be sent based on those labels.
+          - That all seems rather pointless until you consider how easily a corporate WAN could suffer from congestion.
+          - Just imagine that you had a 12 site WAN, with 11 regional sites, each with 2Mbps connections, and a head office that has a 10Mbps connection (including 4Mbps of Internet access). In theory, 22Mbps of traffic could go from the regional sites to the Head Office. Another 4Mbps would go from the Internet to Head Office. That's 26Mbps in total, a LOT more than a 10Mbps connection to Head Office could cope with.
+          - Now clearly the links aren't likely to be 100% full. But at 50% utilisation you still have 13Mbps of data trying to travel over a 10Mbps connection, and one in four packets being dropped. How should the network decide which packets to drop? Which packets should be given priority? How do you ensure that time-sensitive applications such as VoIP telephony don't suffer service degradation as a result of this network congestion?
+          - MPLS enables you to label the different types of data on your WAN so that time-sensitive data is given priority over delay-tolerant data. To move into more geeky terms, it allows you to apply different Classes of Service to different types of traffic, ensuring that the levels of latency, jitter and packet-loss experienced by each type of traffic is appropriate.
+          - MPLS is something that's delivered on top of a leased line circuit. In other words you can get an MPLS leased line that's build upon cable leased lines, or upon DSL ones, or upon a combination of them.
+    - Dedicated Line
+      - In computer networks and telecommunications, a dedicated line is a communications cable or other facility dedicated to a specific application, in contrast with a shared resource such as the telephone network or the Internet.
+      - In practice, such services may not be provided by a single, discrete, end-to-end cable, but they do provide guarantees of constant bandwidth availability and near-constant latency, properties that cannot be guaranteed for more public systems. Such properties add a considerable premium to the price charged.
+      - As more general-purpose systems have improved, dedicated lines have been steadily replaced by intranets and the public Internet, but they are still useful for time-critical, high-bandwidth applications such as video transmission.
+    - Media types:
+      - Coaxial
+      - Twisted Pair Cable
+        - STP
+        - UTP
+      - Fibre optic
+    - Wireless
+    - Mobile technology
+    - Cable/connection standards
+  - Softwares:
+    - Network Operating System
+      - A network operating system (NOS) is a computer operating system system that is designed primarily to support workstation, personal computer, and, in some instances, older terminal that are connected on a local area network (LAN).
+      - Examples
+        - Artisoft's LANtastic
+        - Banyan VINES
+        - Novell's NetWare
+        - Microsoft's LAN Manager
+      - In addition, some multi-purpose operating systems, such as Windows NT and Digital's OpenVMS come with capabilities that enable them to be described as a network operating system.
+      - A network operating system provides 
+        - printer sharing
+        - common file system and database sharing
+        - application sharing
+        - the ability to manage a network name directory, security
+        - other housekeeping aspects of a network.
+    - Virus checker
+      - Antivirus or anti-virus software (often abbreviated as AV), sometimes known as anti-malware software, is computer software used to prevent, detect and remove malicious software. Antivirus software was originally developed to detect and remove computer viruses, hence the name.
+    - Firewall
+      - A firewall is a network security system, either hardware- or software-based, that uses rules to control incoming and outgoing network traffic.
+      - A firewall acts as a barrier between a trusted network and and an untrusted network. A firewall controls access to the resources of a network through a positive control model. This means that the only traffic allowed onto the network is defined in the firewall policy; all other traffic is denied.
+      - History of firewalls
+        - Computer security borrowed the term firewall from firefighting and fire prevention, where a firewall is a barrier established to prevent the spread of fire.
+        - When organizations began moving from mainframe computers and dumb clients to the client-server model, the ability to control access to the server became a priority. Before firewalls emerged in the late 1980s, the only real form of network security was performed by access control lists (ACLs) residing on routers. ACLs determined which IP addresses were granted or denied access to the network.
+        - The growth of the Internet and the resulting increased connectivity of networks meant that this type of filtering was no longer enough to keep out malicious traffic as only basic information about network traffic is contained in the packet headers. Digital Equipment Corp. shipped the first commercial firewall (DEC SEAL in 1992) and firewall technology has since evolved to combat the increasing sophistication of cyberattacks.
+      - Types of Firewalls
+        - Packet firewalls
+          - The earliest firewalls functioned as packet filters, inspecting the packets that are transferred between computers on the Internet. When a packet passes through a packet-filter firewall, its source and destination address, protocol, and destination port number are checked against the firewall's rule set. Any packets that aren't specifically allowed onto the network are dropped (i.e., not forwarded to their destination). For example, if a firewall is configured with a rule to block Telnet access, then the firewall will drop packets destined for TCP port number 23, the port where a Telnet server application would be listening.
+          - Packet-filter firewalls work mainly on the first three layers of the OSI reference model (physical, data-link and network), although the transport layer is used to obtain the source and destination port numbers. While generally fast and efficient, they have no ability to tell whether a packet is part of an existing stream of traffic. Because they treat each packet in isolation, this makes them vulnerable to spoofing attacks and also limits their ability to make more complex decisions based on what stage communications between hosts are at.
+        - Stateful firewalls
+          - In order to recognize a packet's connection state, a firewall needs to record all connections passing through it to ensure it has enough information to assess whether a packet is the start of a new connection, a part of an existing connection, or not part of any connection. This is what's called "stateful packet inspection." Stateful inspection was first introduced in 1994 by Check Point Software in its FireWall-1 software firewall, and by the late 1990s, it was a common firewall product feature.
+          - This additional information can be used to grant or reject access based on the packet's history in the state table, and to speed up packet processing; that way, packets that are part of an existing connection based on the firewall's state table can be allowed through without further analysis. If a packet does not match an existing connection, it's evaluated according to the rule set for new connections.
+        - Application-layer firewalls
+          - As attacks against Web servers became more common, so too did the need for a firewall that could protect servers and the applications running on them, not merely the network resources behind them. Application-layer firewall technology first emerged in 1999, enabling firewalls to inspect and filter packets on any OSI layer up to the application layer.
+          - The key benefit of application-layer filtering is the ability to block specific content, such as known malware or certain websites, and recognize when certain applications and protocols -- such as HTTP, FTP and DNS -- are being misused.
+          - Firewall technology is now incorporated into a variety of devices; many routers that pass data between networks contain firewall components and most home computer operating systems include software-based firewalls. Many hardware-based firewalls also provide additional functionality like basic routing to the internal network they protect.
+        - Proxy firewalls
+          - Firewall proxy servers also operate at the firewall's application layer, acting as an intermediary for requests from one network to another for a specific network application. A proxy firewall prevents direct connections between either sides of the firewall; both sides are forced to conduct the session through the proxy, which can block or allow traffic based on its rule set. A proxy service must be run for each type of Internet application the firewall will support, such as an HTTP proxy for Web services.
+      - Firewalls in the perimeterless age
+        - The role of a firewall is to prevent malicious traffic reaching the resources that it is protecting. Some security experts feel this is an outdated approach to keeping information and the resources it resides on safe. They argue that while firewalls still have a role to play, modern networks have so many entry points and different types of users that stronger access control and security at the host is a better technological approach to network security.
+          - Virtualization strategies such as virtual desktop infrastructure can dynamically respond to different scenarios by offering tailored access control to applications, files, Web content and email attachments based on the user's role, location, device and connection. This approach to security does provide additional protection that a firewall can't, but information security requires defense-in-depth, and firewalls still offer essential low-level protection as well as important logging and auditing functions.
+    - Email Client
+      - In Internet, an email client, email reader or more formally mail user agent (MUA) is a computer program in the category of groupware environments used to access and manage a user's email. Client is meant to be a role.
+      - Client is meant to be a role. For example, a web application which provides message management, composition, and reception functions may internally act as an email client; as a whole, it is commonly referred to as webmail. Likewise, email client may be referred to a piece of computer hardware or software whose primary or most visible role is to work as an email client.
+  - Commercial systems
+    - Software eg:
+      - Mac OSX
+        - Mac OS X is a development platform that supports multiple development technologies including UNIX, Java, the proprietary Cocoa and Carbon runtime environments, and a host of open source, Web, scripting, database and development technologies.
+        - Various links
+          - Migrating from Windows to MAC OS
+            - https://www.youtube.com/watch?v=I96nVmnzUqE
+          - Learn how to use a MAC (Overall)
+            - https://www.youtube.com/watch?v=twf70Tl7piY
+      - Linux
+        - Various parts of an OS
+          - The Bootloader: The software that manages the boot process of your computer. For most users, this will simply be a splash screen that pops up and eventually goes away to boot into the operating system.
+          - The kernel: This is the one piece of the whole that is actually called “Linux”. The kernel is the core of the system and manages the CPU, memory, and peripheral devices. The kernel is the “lowest” level of the OS.
+          - Daemons: These are background services (printing, sound, scheduling, etc) that either start up during boot, or after you log into the desktop.
+          - The Shell: You’ve probably heard mention of the Linux command line. This is the shell – a command process that allows you to control the computer via commands typed into a text interface. This is what, at one time, scared people away from Linux the most (assuming they had to learn a seemingly archaic command line structure to make Linux work). This is no longer the case. With modern desktop Linux, there is no need to ever touch the command line.
+          - Graphical Server: This is the sub-system that displays the graphics on your monitor. It is commonly referred to as the X server or just “X”.
+          - Desktop Environment: This is the piece of the puzzle that the users actually interact with. There are many desktop environments to choose from (Unity, GNOME, Cinnamon, Enlightenment, KDE, XFCE, etc). Each desktop environment includes built-in applications (such as file managers, configuration tools, web browsers, games, etc).
+          - Applications: Desktop environments do not offer the full array of apps. Just like Windows and Mac, Linux offers thousands upon thousands of high-quality software titles that can be easily found and installed. Most modern Linux distributions (more on this in a moment) include App Store-like tools that centralize and simplify application installation. For example: Ubuntu Linux has the Ubuntu Software Center (Figure 1) which allows you to quickly search among the thousands of apps and install them from one centralized location.
+        - Linux is also distributed under an open source license. Open source follows the following key philosophies:
+          - The freedom to run the program, for any purpose.
+          - The freedom to study how the program works, and change it to make it do what you wish.
+          - The freedom to redistribute copies so you can help your neighbor.
+          - The freedom to distribute copies of your modified versions to others.
+        - The above are crucial to understanding the community that comes together to create the Linux platform. It is, without a doubt, an operating system that is “by the people, for the people”. These philosophies are also one of the main reasons a large percentage of people use Linux. It’s about freedom and freedom of choice.
+        - What is a “distribution?"
+        - Linux has a number of different versions to suit nearly any type of user. From new users to hard-core users, you’ll find a “flavor” of Linux to match your needs. These versions are called distributions (or, in the short form, “distros.”) Nearly every distribution of Linux can be downloaded for free, burned onto disk (or USB thumb drive), and installed (on as many machines as you like).
+        - The most popular Linux distributions are:
+          - Ubuntu Linux
+          - Linux Mint
+          - Arch Linux
+          - Deepin
+          - Fedora
+          - Debian
+          - openSUSE.
+      - Windows
+
+# 3 Know the services provided by network systems
+
+  - Directory Services
+    "Organising the many users, applications, services, and systems within a network can be a complex process. Directory services are software systems which help to make that process easier to execute. Directory services store and organise information whilst also providing various types of access to this information to end users."
+    - Introduction
+      - Acronyms of Directory Service
+        - Directory Services
+        - Active Directory Services
+        - Active Directory Directory Services
+        - Distributed Directory Services
+      - Single point Information store of a Network
+      - Locate resources and services distributed throughout the network
+    - Directory Services are used for
+      - Account Management
+        - This is necessary to create, edit and remove user accounts. In a large organisation, it’s important each person has their own set of login details both for security reasons and for legal reasons. For example if multiple people were using the same account, it could mean the new employee has the same level of access to information and features as the CEO.
+        - If the CEO saves file and documents in a folder and someone else removes them, that’s obviously a big problem and for this reason and many others, it’s always advised to create an account for each person.  Account management good practice would also suggest to keep a log of all account activity such as times of login, IP address of login, changes to password, changes made to any account files etc…
+        - Passwords should always be stored in encrypted format and there should only ever be one person who has admin access to create and remove accounts.
+      - Authentication Management
+        - Authentication management is the process of identifying a user when they try to log on to a network system. When they enter a username and password, the system checks that that set of credentials exists in the database and if it does, the user is given access to the system with the appropriate level of privileges that have been assigned to that user.
+        - Where sensitive data is being held and transferred, it’s important that this information can’t be accessed by the public, which is why accounts are needed. Additional security measures can include security questions or puzzles to login (which can’t easily be guessed or automated by a computer) or two factor authentication which involves identifying a user based on something a user knows AND something they psychically posses. A good example is a bank card – in order to withdraw cash from an ATM, a user needs their personal card and they must also know their pin code.
+      - Active Directory
+        - Active directory is a directory service, developed by Microsoft for Windows domain networks. It provides services such as account management, authentication management and domain services.  Active directory contains all the components necessary for the creation of user accounts and user authentication. It also provides permission features and group policies which dictate what users can and cannot access through their account. Users can be grouped by status, department, job role etc… You can also use active directory to ‘name’ a computer or server by linking the IP address to a name as active directory can store an address list of all connected computers and servers.
+        - In business, active directory is by far the largest directory services solution and has been since the 90’s. As of 2015, Over 90% of Fortune 1000 companies use it.
+      - DNS
+        - This is server that matches domains names to IP address. Domain names only exist because it makes it easier for us humans to remember website locations and read at a quick glance. It also helps businesses for branding purposes.
+        - If you visit google.com in a browser, what you’re effectively telling the browser is “send me to the IP address for google.com”. Your computer then contacts your ISP’s DNS server and the DNS server says “google.com is located is located at 173.194.39.78”. You’re then sent to that address.
+        - DNS is also a database system so if one DNS server doesn’t know how to translate a domain name, it can ask another one and so on until the correct IP address is retrieved.
+    - Criteria of Genuine Enterprise Directory Service
+      - If necessary, the information store can be distributed among many different physical locations. However, for the purposes of searches and administration, it appears as a single database.
+      - The information store can accommodate new types of objects, as necessary, to meet the network’s changing needs.
+      - Users and administrators can easily search for information from various locations throughout the network.
+      - The system has no dependency upon physical location.
+      - The information store is accessible from many different operating systems. Typically, this is possible thanks to nonproprietary communication standards utilized in the system.
+    - Other Directory Service Providers
+      - Novell has Novell Directory Services (NDS), or Edirectory
+      - Banyan has StreetTalk
+      - By Sun Microsystems
+      - By Netscape, and others.
+      - The key to the success of these competing directory services will depend on support for LDAP (Lightweight Directory Access Protocol). LDAP specifies a standard, vendor-independent syntax for querying a directory service. Microsoft’s ADS provides robust support for LDAP.
+    - Explanation
+      - A directory service is a customizable information store that functions as a single point from which users can locate resources and services distributed throughout the network. This customizable information store also gives administrators a single point for managing its objects and their attributes. Although this information store appears as a single point to the users of the network, it is actually most often stored in a distributed form.
+      - A genuine directory service is much more than a database technology that stores users and groups. This is a really important point — one that you should keep in mind as you review for the test.
+      - The database that forms a directory service is not designed for transactional data. (For this reason, many people prefer to use the phrase “information store” in their definitions of a directory service.) The data stored in your directory service should be fairly stable and should change only as frequently as the objects in your network. For example, the data that forms a directory service changes much less frequently than a sales database. Data that changes very frequently would be stored in another type of database on the network. (Of course, Microsoft would suggest Access or SQL Server for storing your transactional data.)
+      - Active Directory Services rely on a “blueprint” that defines the types of objects stored in the information store. The official term for this “blueprint” in Active Directory is the schema. The great news for you as an administrator is that this schema is extensible — a fancy way of saying that you (or other authorized personnel) can add objects and their attributes to the schema to define additional components in your network. In fact, just about any information you want to store in Active Directory can be accommodated. For example, you may want to include Employee ID Number information for each user account in your Active Directory information store. Although the schema already has dozens of attributes for users, no such attribute exists, but it is one you should add! Just remember that you do not store transactional information here — leave that to a full-fledged database system.
+      - Active Directory offers robust search capabilities for users of the network. You can search for any object stored in the directory, using any of the object’s attributes in the search criteria. Following the previous example, you could search for all users in the network whose Employee ID Numbers are greater than a certain value. This is all so simple and flexible thanks to a special service in ADS called the global catalog. This special subset of the information store resides on select domain controllers called global catalog servers. These servers store the portion of the full information store that are most likely to be used in searches. They are very efficient at fulfilling the requests of network users (including administrators). Global catalog servers locate resources quickly and efficiently, regardless of their actual location in the network.
+      - Thanks to a complex and robust system for replication of information store information throughout the distributed system, no reliance on physical location exists within Active Directory Services. In Windows 2000, you actually define the physical topology of your network in the directory service, so domain controllers can notify themselves effectively and efficiently of changes to the information.
+  - Telecommunication services
+    - Introduction
+      - Telecommunication is a system traditionally used to carry voice or data over long distances. Nowadays, many businesses have internal digital telecommunication systems that use VOIP. It can be managed by a network which enables one telephone to connect to another within a network without having to connect to an outside line and go through a traditional telecommunications company. This saves the business money and time. Businesses often manage other telecommunication systems in-house.
+    - Telecommunication Services
+      - Email
+        - Email today is a large part of communication between users and business and business to business. Sending and receiving messages electronically speeds up communication. Email servers send, receive, store and filter data. Simple Mail Transfer Protocol (SMTP) is a standard used for email transmission and together with DNS servers and MX (mail exchange) servers, they figure out how and where to send email based on the ‘to’ email address.
+      - Internet relay chat (IRC)
+        - Similar to texting, this is used in a lot of social media platforms today for instant chat and can be used quickly and easily by users to communicate with other users within various departments in a business or outside of a business.
+      - Discussion Boards
+        - Also known as forums, these provide users with a platform to create threads (topics of discussion) and add comments in response to other people. Discussion boards can be used to provide help and support to users, to enable users to share ideas and tips or simply to discuss interests and hobbies.
+      - Social Networking
+        - Most of us are familiar with social networking but there are dedicated social networks designed for business use too in internal networks. Social networks provide features similar to discussion boards, IRC and email.
+    - Remote Access Service
+      - Remote access is useful for technical support or working from home. If a user requires technical support, remote access enables tech support to log in remotely to that user’s device and fix the problem. This means for example that a company in London could hire a company in China to provide technical support if the company in China can remotely log in to devices in London.
+      - If staff want to work from home but need access to their computer at work, remote access would also enable them to do work on their office computer from their home computer.
+    - Remote access via
+      - Mobiles
+      - Remote Desktop
+      - Social Networking
+  - File services
+    - Introduction
+      - File servers are servers that enable users to store and share files on a network. The transfer of files is usually performed using the File Transport Protocol (FTP) which is a standard network protocol used to transfer files over a network. Some of the services a file server provides are as follows
+    - File Services
+      - File Transfer
+        - This allows users to transfer different types of files over a network such as downloading information from the internet.
+      - File sharing
+        - If a user wants to share a file, they can set permissions on the file so that only a specific user/s can access the file. They could also grant a specific user access to all files within a certain folder or sub folder. These files can be shared in a local network or on the internet.
+  - Application services
+    - Introduction
+      - Application Software is a type of software which can be used by a user to do different tasks on the computer. These software work with the operating system, this means that the user can gain access to hardware. For example: Microsoft Words, Presentation and Access. These types of application software’s can be used at school, home and businesses; some application software are available for different types of operating systems such as MAC OS, Windows and Linux and they would different types of version of the same software.
+      - Custom Written Application
+        - Custom Written Applications are software which is written by the programmer with the requirements of the company. For example: Games, spreadsheet and other programs. The business would need to create their own software for the user. The advantages for Custom Written Application is that they are made according to the demand of the company so it’s easier to process the information and data. Another advantage would be the software’s are made what the company is required. However the disadvantages for Custom Written Applications is that it’s expensive when the company hires a programmer to create the software, another disadvantage is that users would need to be trained before using the new software which will have their own requirements uses in each functions.
+      - Off the shelf Application
+        - Off the shelf application is a type of software which can be use at Home and Schools. The applications they would use is Processors, Spreadsheets, Publisher Tools, Graphical Packages and many more.  The benefits for off the shelf applications is that its cheap, this means that the cost of development can be spread over a large number of users, another benefit would be that it be faster to get set up as the development work has been done. The drawbacks would be that the user will find this software more complex than the custom built software, another drawback for off the shelf application is that if the user changes the requirements, the software will not be able to keep up with the changes.
+    - Features of an application service
+      - Application Software
+        - Database
+          - Database applications allow users to access information stored in databases. They provide structure and organisation for information which enables users to quickly and easily retrieve information they need. This information can then be stored and manipulated on the users own computer which doesn’t affect the original database information.
+        - Web
+          - A website is a made of a collection of web pages which are related to certain topics. A website is also contains images, information and videos. A website is run by a web server, this is accessible by a network this includes the Internet or local area network and Wide area network as the web is used around the world and also ‘www’ (World Wide Web) shows it accessible by the world. The web allows the user to connect with the web server mainly and this may be because of sharing files again through LAN or WAN.
+        - Proxy
+          - Proxy server is a type of server which allows the user to access web pages by other computer, for example: when another computer requests a webpage it will retrieved by the proxy server and its sent to the requesting computer. Proxy Server would make the internet access work more efficiently. If the user accesses a page on the internet, that webpage would be saved on the proxy server. The proxy server would be able to find the webpage quicker from the cached memory. A proxy server works with the firewall, that that it would provide security barrier between the internet network and the internet. The benefits of proxy server is that it can speed up the browsing and access of the data in a network, another advantage for proxy server is that it can used to bypass blocked sites in schools, offices and can access to parental blocked data. The disadvantage for Proxy server is that students are able to access explicit material on the internet such as Internet pornography; another disadvantage for proxy server is that the proxy server owner look at the cache to see if they can username and passwords.
+      - Shared resources
+        - Shared Resources are resources on a network which the user can access them. These type of resources can be referred computer data, information or hardware devices, these can be accessed from a remote computer through a local area network or an intranet. This resources are on computer so that the user can gain access to them, this means that they would need to be able to connect through the network. The user can share their files to devices such as a printer. The printer server is a type of server which allows the user to print out their work and it would control the number of documents which are printed. If there are number of user want to print out work, they would need to wait in a queue. Whoever was the first user who sent their work to the printer for printing, their work would be printed first.
+        - Examples
+          - Printing
+          - Storage space
+      - Voice over IP (VoIP)
+        - VOIP is known as voice over internet protocol, this protocol is used to allow the user to make telephone calls from their computer. This protocol sends packets of data which will contain voice and its sent over the network using the Internet Protocol and the format of the voice information would be in digital format. The advantage of VOIP is that people can use Skype or Yahoo messenger to communicate with other people. For Skype, the user would be allow to call people locally for free and if they call other subscribers then they would need to pay the charges to call. Another advantage would be that its cheaper than an other hardware and software, this means that if the user wants to communicate with someone from their computer, they would need to a internet connection, sound card , speakers and microphones and these hardware’s are cheap. The disadvantage for VOIP is that there is no guarantee of the quality when they are using the internet, another disadvantage would be that if the VOIP is fully functioning, the user will have high quality sound when they are talking to them from a normal landline phone.
+      - Mobile working
+        - A mobile is an electronic telecommunications device. Mobile phones are also known as a cellular phone or cellphone. They are connected to a wireless network through radio wave as well as satellite transmissions. They provide users with voice communications, Short Message Service (SMS), Multimedia Message Service (MMS).
+        - As technology improves year by year newer mobile phones offer better facilities such the use of the internet, e-mail and instant messaging. Mobiles are used in the network to allow users to have a portable device as well as communicate with one and other on the go constantly.
+      - Authentication
+        - This is important for all users as security is important. It’s used in schools for students and staff. Used in business and companies. Large organizations will have passwords and usernames. The benefit of this is that if they have passwords and usernames is that their work is secure. Authentication can also be done in other ways such as swiping a smart card, waving a token device, or even using voice recognition and without authentication a user will not be allowed through as they are unauthorized. The network confirms the person’s details and this will determines what access the person is granted.
+
+# 4 Be able to make networked systems secure
+
+  - Securing a system: 
+    - Methods:
+      - Passwords, Authorization permissions and Access Control Lists 
+        - Most Commonly Used Password
+          - 123456
+          - 123456789
+          - qwerty
+          - 12345678
+          - 111111
+          - 1234567890
+          - 1234567
+          - password
+        - Passwords Cracking Techniques
+          - Brute force
+            - A brute-force attack consists of an attacker trying many passwords or passphrases with the hope of eventually guessing correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found.
+            - Just as a criminal might break into, or "crack" a safe by trying many possible combinations, a brute force cracking application proceeds through all possible combinations of legal characters in sequence. Brute force is considered to be an infallible, although time-consuming, approach.
+            - Brute force attacks work by calculating every possible combination that could make up a password and testing it to see if it is the correct password. As the password’s length increases, the amount of time, on average, to find the correct password increases exponentially. This means short passwords can usually be discovered quite quickly, but longer passwords may take decades.
+          - Dictionary Attack
+            - A dictionary attack is based on trying all the strings in a pre-arranged listing, typically derived from a list of words such as in a dictionary (hence the phrase dictionary attack).
+            - In contrast to a brute force attack, where a large proportion of the key space is searched systematically, a dictionary attack tries only those possibilities which are deemed most likely to succeed.
+            - Dictionary attacks often succeed because many people have a tendency to choose short passwords that are ordinary words or common passwords, or simple variants obtained, for example, by appending a digit or punctuation character.
+            - Dictionary attacks are relatively easy to defeat, e.g. by using a passphrase or otherwise choosing a password that is not a simple variant of a word found in any dictionary or listing of commonly used passwords.
+          - Rainbow Table Attack
+            - A rainbow table is a precomputed table for reversing cryptographic hash functions, usually for cracking password hashes.
+            - Tables are usually used in recovering a plaintext password up to a certain length consisting of a limited set of characters.
+            - It is a practical example of a space/time trade-off, using less computer processing time and more storage than a brute-force attack which calculates a hash on every attempt, but more processing time and less storage than a simple lookup table with one entry per hash.
+          - Phishing
+            - Phishing is the attempt to obtain sensitive information such as usernames, passwords, and credit card details (and, indirectly, money), often for malicious reasons, by disguising as a trustworthy entity in an electronic communication.
+            - Phishing is typically carried out by email spoofing or instant messaging, and it often directs users to enter personal information at a fake website, the look and feel of which are almost identical to the legitimate one.
+            - Communications purporting to be from social web sites, auction sites, banks, online payment processors or IT administrators are often used to lure victims.
+            - Phishing emails may contain links to websites that are infected with malware.
+          - Social Engineering
+            - Social engineering, in the context of information security, refers to psychological manipulation of people into performing actions or divulging confidential information.
+            - The attacks used in social engineering can be used to steal employees' confidential information. 
+            - The most common type of social engineering happens over the phone.
+            - One example of social engineering is an individual who walks into a building and posts an official-looking announcement to the company bulletin that says the number for the help desk has changed. So, when employees call for help the individual asks them for their passwords and IDs thereby gaining the ability to access the company's private information.
+            - Another example of social engineering would be that the hacker contacts the target on a social networking site and starts a conversation with the target. Slowly and gradually, the hacker gains trust of the target and then uses it to get access to sensitive information like password or bank account details.
+            - Other examples of social engineering attacks are criminals posing as exterminators, fire marshals and technicians to go unnoticed as they steal company secrets.
+      - Backing up
+        - Having data backed up is the cornerstone of any disaster recovery plan. Without backups, a simple hard drive failure can set your company back days or even weeks. In fact, without backups, your company’s very existence is in jeopardy. For schools this is a legality and three backups are necessary, nightly, weekly and off site copy. 
+        - The main goal of backups is simple:Keep a spare copy of your network’s critical data so that, no matter what happens, you never lose more than one day’s work. The easiest way to do this is to make a copy of your files every day. If that’s not possible, techniques are available to ensure that every file on the network has a backup copy that’s no more than one day old.
+        - The goal of disaster planning is to make sure that your company can resume operations shortly after a disaster occurs, such as a fire, earthquake, or any other imaginable calamity. Backups are a key component of any disaster recovery plan, but disaster planning entails much more.
+        - The most common media for making backup copies of network data is tape. Depending on the make and model of the tape drive, you can copy as much as 80GB of data onto a single tape cartridge.
+        - All versions of Windows come with a built-in backup program. In addition, most tape drives come with backup programs that are often faster or more flexible than the standard Windows backup. You can also purchase sophisticated backup programs that are specially designed for large networks.
+        - Back-Up Types
+          - Normal backups
+            - A normal backup, also called a full backup, is the most basic type of backup. In a normal backup, all files in the backup selection are backed up — regardless of whether the archive bit has been set. As each file is backed up, its archive bit is reset, so backups that select files based on the archive bit setting won’t back up the files.
+          - Copy backups
+            - A copy backup is similar to a normal backup, except that the archive bit is not reset as each file is copied. As a result, copy backups don’t disrupt the cycle of normal and incremental or differential backups.
+          - Daily backups
+            - A daily backup backs up just those files that have been changed the same day that the backup is performed. A daily backup examines the modification date for each file to determine whether a file should be backed up. Daily backups don’t reset the archive bit. 
+          - Incremental backups
+            - An incremental backup backs up only those files that you’ve modified since the last time you did a backup. Incremental backups are a lot faster than full backups because your network users probably modify only a small portion of the files on the server in any given day. As a result, if a full backup takes three tapes, you can probably fit an entire week’s worth of incremental backups on a single tape.
+          - Differential backups
+            - A differential backup is similar to an incremental backup, except that it doesn’t reset the archive bit as files are backed up. As a result, each differential backup represents the difference between the last normal backup and the current state of the hard drive. To do a full restore from a differential backup, you first restore the last normal backup, and then you restore the most recent differential backup.
+      - Restoring
+        - If you simply copy your files as a form of backing up, then restoring those files is no problem. You can overwrite current files with the backups, or you can copy files to a new hard disk, for example. If you use a backup program to create backups, you need to restore the backup to get your files back in working order. You cannot simply copy the backups to a new hard disk; you must run a restore.
+        - You should test your backups periodically to make sure that they’re going to work. You don’t want to take the time and trouble to back up, only to find that the backup is worthless when you really need it. 
+        - Guidelines for restoring backups.
+          - Before you start to restore your backups, write-protect the media so that you don’t accidentally overwrite it. Write-protect means to disable the tape or disc from recording new data over the old. Different media use different write-protect methods; see the instructions that come with the media.
+          - If you have a hard disk failure, you need to reinstall the operating system and your applications on a new hard disk. Then you need to install the backup software before you restore your backup of files.
+          - Always restore your last full backup first. Then restore incremental or differential backups in order, from the earliest to the latest.
+          - After you restore your data, hold on to the backup media for a few days to make sure that everything is working, just in case you need to go back to the backup. 
+      - Encrypting
+        - Encryption refers to the process of translating plain text information(or data) into a secret code so that unauthorized users can’t read the data.
+        - Encryption is especially useful in environments where the data can’t be physically secured.If a thief can steal the server computer (or just its hard drive), he or she may be able to crack through the Windows security features and gain access to the data on the hard drive by using low-level disk diagnostic tools. If the files are stored in encrypted form, however, the thief’s efforts will be wasted because the files will be unreadable.
+        - All forms of encryption use some sort of key to encrypt and decrypt the data.
+        - The most basic type of data encryption, called synchronous data encryption, uses numeric keys that are used to apply complex mathematical operations to the source data in order to translate the data into encrypted form. These operations are reversible, so if you know the key, you can reverse the process and decrypt the data.
+          - For example, suppose that the encryption technique is as simple as shifting every letter of the alphabet up by the value of the key. Thus, if the key is 3, then A becomes D, B becomes E, etc. The message “Elementary, my dear Watson” becomes “Hohphqwdub, pb ghdu Zdwvrq.” This message is incomprehensible, unless you know the key. Then, reconstructing the original message is easy.
+        -  The actual keys and algorithms used for cryptography are much more complicated. Keys are typically binary numbers of 40 or 128 bits, and the actual calculations used to render the data in encrypted form are complicated. 
+        - The classic dilemma of cryptography is this: How can I securely send the key to the person with whom I want to exchange messages? The answer is you can’t. You can’t encrypt the key, because the other person would need to know the key in order to decrypt it. That’s where public key encryption comes into play.
+        - Public key encryption is a technique in which two keys are used: a private key and a public key. The keys are related to each other mathematically. Either of the keys can be used to encrypt the data, but the encryption process isn’t completely reversible: You have to have the private key in order to decrypt the data. 
+        - Other Methods include:
+          - Transposition - characters switched around
+          - Substitution - characters replaced by other characters
+        - Cryptography serves 3 purposes:
+          - Helps to identify authentic users
+          - Prevents alteration of the message
+          - Prevents unauthorised users from reading the message 
+      - Biometrics
+        - Biometric verification is any means by which a person can be uniquely identified by evaluating one or more distinguishing biological traits. Unique identifiers include fingerprints, hand geometry, earlobe geometry, retina and iris patterns, voice waves, DNA, and signatures.The oldest form of biometric verification is fingerprinting. 
+        - Types
+          - Fingerprint identification
+            - Fingerprint ridges are like a picture on the surface of a balloon. As the person ages, the fingers get do get larger. However, the relationship between the ridges stays the same, just like the picture on a balloon is still recognizable as the balloon is inflated.
+          - Retina scan
+            - A retina scan provides an analysis of the capillary blood vessels located in the back of the eye; the pattern remains the same throughout life. A scan uses a low-intensity light to take an image of the pattern formed by the blood vessels.
+          - Face recognition
+            - Facial characteristics (the size and shape of facial characteristics, and their relationship to each other). Typically, this method uses relative distances between common landmarks on the face to generate a unique "faceprint."
+          - Voice analysis
+            - The analysis of the pitch, tone, cadence(rythm/tempo) and frequency of a person's voice.
+      - Firewalls
+        -  A firewall is a security-conscious router that sits between the Internet and your network with a single purpose: preventing external attacks.
+        - The firewall acts as a security guard between the Internet and your Network.
+        - All network traffic into and out of the system must pass through the firewall, which prevents unauthorised access to the network.
+        - Some type of firewall is a must- have if your network has a connection to the Internet, whether that connection is broadband, T1, or some other high-speed connection.
+        - Without it, sooner or later a hacker will discover and breach your unprotected network. 
+        - You can set up a firewall using two basic ways.
+          - The easiest way is to purchase a firewall program, which is basically a self-contained router with built-in firewall features like one Alarm or Sophos. Most firewall appliances include a Web-based interface that enables you to connect to the firewall from any computer on your network using a browser. You can then customise the firewall settings to suit your needs.
+          - Alternatively, you can set up a server computer to function as a firewall computer (SSL). The server can run just about any network operating system, but most dedicated firewall systems run Linux.
+        - Whether you use a firewall appliance or a firewall computer, the firewall must be located between your network and the Internet. Usually, one end of the firewall is connected to a network hub, which is, in turn, connected to the other computers on the network. The other end of the firewall is connected to the Internet. As a result, all traffic from the LAN to the Internet and vice versa must travel through the firewall.
+      - Physical security:
+        - CCTV
+          - It is common to have these on buildings but companies also have them in the network room, the corridors, reception and wherever there is data/money stored. Some have motion sensors so they record as soon as there is movement.
+        - Locks
+          - Standard locks on doors are usual, in most buildings staff rooms have locks. Network rooms particularly have locks, all entrances and exits. But network server cupboards and racks have locks, laptop cabinets, filing cabinets and keys allocated only to those who have rights. These locks can be keys or numbered.
+      - Antivirus
+        - Anti-virus software is a program or set of programs that are designed to prevent, search for, detect, and remove software viruses, and other malicious software like worms, trojans, adware, and more.
+        - These tools are critical for users to have installed and up-to-date because a computer without anti-virus software installed will be infected within minutes of connecting to the internet. The bombardment is constant, with anti-virus companies update their detection tools constantly to deal with the more than 60,000 new pieces of malware created daily.
+        - There are several different companies that build and offer anti-virus software and what each offers can vary but all perform some basic functions:
+          - Scan specific files or directories for any malware or known malicious patterns
+          - Allow you to schedule scans to automatically run for you
+          - Allow you to initiate a scan of a specific file or of your computer, or of a CD or flash drive at any time.
+          - Remove any malicious code detected –sometimes you will be notified of an infection and asked if you want to clean the file, other programs will automatically do this behind the scenes.
+          - Show you the ‘health’ of your computer
+      - Intrusion detection systems (IDS)
+        - An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations.
+        - Any detected activity or violation is typically reported either to an administrator or collected centrally using a Security Information and Event management (SIEM) system.
+        - A SIEM system combines outputs from multiple sources, and uses alarm filtering techniques to distinguish malicious activity from false alarms.
+        - There is a wide spectrum of IDS, varying from antivirus software to hierarchical systems that monitor the traffic of an entire backbone network.
+        - Types of IDS
+          - Network intrusion detection systems (NIDS)
+          - Host-based intrusion detection systems (HIDS)
+        - Comparison with firewalls
+          - Though they both relate to network security, an IDS differs from a firewall in that a firewall looks outwardly for intrusions in order to stop them from happening.
+          - Firewalls limit access between networks to prevent intrusion and do not signal an attack from inside the network.
+          - An IDS evaluates a suspected intrusion once it has taken place and signals an alarm.
+          - An IDS also watches for attacks that originate from within a system. This is traditionally achieved by examining network communications, identifying heuristics and patterns (often known as signatures) of common computer attacks, and taking action to alert operators.
+          - A system that terminates connections is called an intrusion prevention system, and is another form of an application layer firewall.
+  - Business risks:
+    - Loss of Service
+    - Loss of Business
+      - Through loss of customer records
+      - Increased costs
+      - Loss of confidentiality
+      - Compromised data integrity
+      - Security issues
+        - eg malware (hostile, intrusive, or annoying software or program code), 
+        - viruses, 
+        - Trojans, 
+        - worms,
+        - spyware,
+        - adware
+    - Before computers were networked, when a machine went down, that was one computer. It took time to repair it but business went on. With networks, the same happens but the user can move and business goes on. But when a network goes down through physical or software reasons, this can bring every machine down. “Network down time” can seriously impact on companies. For a school down time can mean some classes may be cancelled or find an alternative method, but for companies like Amazon, Play, E-bay etc, this can have a serious financial impact on the company. 
+    -  Business confidence is one of the more integral parts of modern business and the loss of information, security breaches, down time, theft or hacking can have a serious impact on the confidence of customers. The more down time a company has, the less confidence customers have. Down time can cause a delay in the delivery of goods which is vital for Play so they might go to other service provider instead.
