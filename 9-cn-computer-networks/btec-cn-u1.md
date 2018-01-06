@@ -57,6 +57,12 @@
 
 ---
 
+# What is a Network ?
+
+A computer network, or data network, is a digital telecommunications network which allows nodes to share resources. In computer networks, networked computing devices exchange data with each other using a data link.
+
+![](../images/computer-network.jpg)
+
 # Types of network
 
 ## Based on Size
@@ -67,6 +73,10 @@
 1. Wide area network (WAN)
 1. Internet
 
+![](../images/pan-lan-man-wan-simple.png)
+
+![](../images/pan-lan-man-wan.jpg)
+
 ## Based on Topology
 
 1. Star Topology
@@ -75,9 +85,11 @@
 1. Mesh Topology
 1. Tree Topology
 
+![](../images/network-topology.jpg)
+
 ## Network Access Methods
 
-### 1. CSMA Carrier Sense Multiple Access
+### 1. Carrier Sensing Multiple Access (CSMA)
 
 Carrier sense multiple access (CSMA) is a media access
 control (MAC) protocol in which a node verifies the absence 
@@ -89,6 +101,14 @@ the presence of a carrier signal from another node before
 attempting to transmit. If a carrier is sensed, the node
 waits for the transmission in progress to end before
 initiating its own transmission.
+
+- Node listens for traffice on network.
+- If traffic is not heard, node releases packet onto network.
+- If two nodes release packets at the same time, the packets hit each other and collision occurs.
+  - A collision causes a power spike heard by all nodes.
+  - A collision destroys the data contained in the two packets.
+- If no collision then the transmission was successful.
+- Network is now freed up for another node to transmit.
 
 ### 2. Token Passing
 
