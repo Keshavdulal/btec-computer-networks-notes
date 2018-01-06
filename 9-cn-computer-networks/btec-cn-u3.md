@@ -1,0 +1,100 @@
+# 3 Know the services provided by network systems
+
+  - Directory Services
+    "Organising the many users, applications, services, and systems within a network can be a complex process. Directory services are software systems which help to make that process easier to execute. Directory services store and organise information whilst also providing various types of access to this information to end users."
+    - Introduction
+      - Acronyms of Directory Service
+        - Directory Services
+        - Active Directory Services
+        - Active Directory Directory Services
+        - Distributed Directory Services
+      - Single point Information store of a Network
+      - Locate resources and services distributed throughout the network
+    - Directory Services are used for
+      - Account Management
+        - This is necessary to create, edit and remove user accounts. In a large organisation, it’s important each person has their own set of login details both for security reasons and for legal reasons. For example if multiple people were using the same account, it could mean the new employee has the same level of access to information and features as the CEO.
+        - If the CEO saves file and documents in a folder and someone else removes them, that’s obviously a big problem and for this reason and many others, it’s always advised to create an account for each person.  Account management good practice would also suggest to keep a log of all account activity such as times of login, IP address of login, changes to password, changes made to any account files etc…
+        - Passwords should always be stored in encrypted format and there should only ever be one person who has admin access to create and remove accounts.
+      - Authentication Management
+        - Authentication management is the process of identifying a user when they try to log on to a network system. When they enter a username and password, the system checks that that set of credentials exists in the database and if it does, the user is given access to the system with the appropriate level of privileges that have been assigned to that user.
+        - Where sensitive data is being held and transferred, it’s important that this information can’t be accessed by the public, which is why accounts are needed. Additional security measures can include security questions or puzzles to login (which can’t easily be guessed or automated by a computer) or two factor authentication which involves identifying a user based on something a user knows AND something they psychically posses. A good example is a bank card – in order to withdraw cash from an ATM, a user needs their personal card and they must also know their pin code.
+      - Active Directory
+        - Active directory is a directory service, developed by Microsoft for Windows domain networks. It provides services such as account management, authentication management and domain services.  Active directory contains all the components necessary for the creation of user accounts and user authentication. It also provides permission features and group policies which dictate what users can and cannot access through their account. Users can be grouped by status, department, job role etc… You can also use active directory to ‘name’ a computer or server by linking the IP address to a name as active directory can store an address list of all connected computers and servers.
+        - In business, active directory is by far the largest directory services solution and has been since the 90’s. As of 2015, Over 90% of Fortune 1000 companies use it.
+      - DNS
+        - This is server that matches domains names to IP address. Domain names only exist because it makes it easier for us humans to remember website locations and read at a quick glance. It also helps businesses for branding purposes.
+        - If you visit google.com in a browser, what you’re effectively telling the browser is “send me to the IP address for google.com”. Your computer then contacts your ISP’s DNS server and the DNS server says “google.com is located is located at 173.194.39.78”. You’re then sent to that address.
+        - DNS is also a database system so if one DNS server doesn’t know how to translate a domain name, it can ask another one and so on until the correct IP address is retrieved.
+    - Criteria of Genuine Enterprise Directory Service
+      - If necessary, the information store can be distributed among many different physical locations. However, for the purposes of searches and administration, it appears as a single database.
+      - The information store can accommodate new types of objects, as necessary, to meet the network’s changing needs.
+      - Users and administrators can easily search for information from various locations throughout the network.
+      - The system has no dependency upon physical location.
+      - The information store is accessible from many different operating systems. Typically, this is possible thanks to nonproprietary communication standards utilized in the system.
+    - Other Directory Service Providers
+      - Novell has Novell Directory Services (NDS), or Edirectory
+      - Banyan has StreetTalk
+      - By Sun Microsystems
+      - By Netscape, and others.
+      - The key to the success of these competing directory services will depend on support for LDAP (Lightweight Directory Access Protocol). LDAP specifies a standard, vendor-independent syntax for querying a directory service. Microsoft’s ADS provides robust support for LDAP.
+    - Explanation
+      - A directory service is a customizable information store that functions as a single point from which users can locate resources and services distributed throughout the network. This customizable information store also gives administrators a single point for managing its objects and their attributes. Although this information store appears as a single point to the users of the network, it is actually most often stored in a distributed form.
+      - A genuine directory service is much more than a database technology that stores users and groups. This is a really important point — one that you should keep in mind as you review for the test.
+      - The database that forms a directory service is not designed for transactional data. (For this reason, many people prefer to use the phrase “information store” in their definitions of a directory service.) The data stored in your directory service should be fairly stable and should change only as frequently as the objects in your network. For example, the data that forms a directory service changes much less frequently than a sales database. Data that changes very frequently would be stored in another type of database on the network. (Of course, Microsoft would suggest Access or SQL Server for storing your transactional data.)
+      - Active Directory Services rely on a “blueprint” that defines the types of objects stored in the information store. The official term for this “blueprint” in Active Directory is the schema. The great news for you as an administrator is that this schema is extensible — a fancy way of saying that you (or other authorized personnel) can add objects and their attributes to the schema to define additional components in your network. In fact, just about any information you want to store in Active Directory can be accommodated. For example, you may want to include Employee ID Number information for each user account in your Active Directory information store. Although the schema already has dozens of attributes for users, no such attribute exists, but it is one you should add! Just remember that you do not store transactional information here — leave that to a full-fledged database system.
+      - Active Directory offers robust search capabilities for users of the network. You can search for any object stored in the directory, using any of the object’s attributes in the search criteria. Following the previous example, you could search for all users in the network whose Employee ID Numbers are greater than a certain value. This is all so simple and flexible thanks to a special service in ADS called the global catalog. This special subset of the information store resides on select domain controllers called global catalog servers. These servers store the portion of the full information store that are most likely to be used in searches. They are very efficient at fulfilling the requests of network users (including administrators). Global catalog servers locate resources quickly and efficiently, regardless of their actual location in the network.
+      - Thanks to a complex and robust system for replication of information store information throughout the distributed system, no reliance on physical location exists within Active Directory Services. In Windows 2000, you actually define the physical topology of your network in the directory service, so domain controllers can notify themselves effectively and efficiently of changes to the information.
+  - Telecommunication services
+    - Introduction
+      - Telecommunication is a system traditionally used to carry voice or data over long distances. Nowadays, many businesses have internal digital telecommunication systems that use VOIP. It can be managed by a network which enables one telephone to connect to another within a network without having to connect to an outside line and go through a traditional telecommunications company. This saves the business money and time. Businesses often manage other telecommunication systems in-house.
+    - Telecommunication Services
+      - Email
+        - Email today is a large part of communication between users and business and business to business. Sending and receiving messages electronically speeds up communication. Email servers send, receive, store and filter data. Simple Mail Transfer Protocol (SMTP) is a standard used for email transmission and together with DNS servers and MX (mail exchange) servers, they figure out how and where to send email based on the ‘to’ email address.
+      - Internet relay chat (IRC)
+        - Similar to texting, this is used in a lot of social media platforms today for instant chat and can be used quickly and easily by users to communicate with other users within various departments in a business or outside of a business.
+      - Discussion Boards
+        - Also known as forums, these provide users with a platform to create threads (topics of discussion) and add comments in response to other people. Discussion boards can be used to provide help and support to users, to enable users to share ideas and tips or simply to discuss interests and hobbies.
+      - Social Networking
+        - Most of us are familiar with social networking but there are dedicated social networks designed for business use too in internal networks. Social networks provide features similar to discussion boards, IRC and email.
+    - Remote Access Service
+      - Remote access is useful for technical support or working from home. If a user requires technical support, remote access enables tech support to log in remotely to that user’s device and fix the problem. This means for example that a company in London could hire a company in China to provide technical support if the company in China can remotely log in to devices in London.
+      - If staff want to work from home but need access to their computer at work, remote access would also enable them to do work on their office computer from their home computer.
+    - Remote access via
+      - Mobiles
+      - Remote Desktop
+      - Social Networking
+  - File services
+    - Introduction
+      - File servers are servers that enable users to store and share files on a network. The transfer of files is usually performed using the File Transport Protocol (FTP) which is a standard network protocol used to transfer files over a network. Some of the services a file server provides are as follows
+    - File Services
+      - File Transfer
+        - This allows users to transfer different types of files over a network such as downloading information from the internet.
+      - File sharing
+        - If a user wants to share a file, they can set permissions on the file so that only a specific user/s can access the file. They could also grant a specific user access to all files within a certain folder or sub folder. These files can be shared in a local network or on the internet.
+  - Application services
+    - Introduction
+      - Application Software is a type of software which can be used by a user to do different tasks on the computer. These software work with the operating system, this means that the user can gain access to hardware. For example: Microsoft Words, Presentation and Access. These types of application software’s can be used at school, home and businesses; some application software are available for different types of operating systems such as MAC OS, Windows and Linux and they would different types of version of the same software.
+      - Custom Written Application
+        - Custom Written Applications are software which is written by the programmer with the requirements of the company. For example: Games, spreadsheet and other programs. The business would need to create their own software for the user. The advantages for Custom Written Application is that they are made according to the demand of the company so it’s easier to process the information and data. Another advantage would be the software’s are made what the company is required. However the disadvantages for Custom Written Applications is that it’s expensive when the company hires a programmer to create the software, another disadvantage is that users would need to be trained before using the new software which will have their own requirements uses in each functions.
+      - Off the shelf Application
+        - Off the shelf application is a type of software which can be use at Home and Schools. The applications they would use is Processors, Spreadsheets, Publisher Tools, Graphical Packages and many more.  The benefits for off the shelf applications is that its cheap, this means that the cost of development can be spread over a large number of users, another benefit would be that it be faster to get set up as the development work has been done. The drawbacks would be that the user will find this software more complex than the custom built software, another drawback for off the shelf application is that if the user changes the requirements, the software will not be able to keep up with the changes.
+    - Features of an application service
+      - Application Software
+        - Database
+          - Database applications allow users to access information stored in databases. They provide structure and organisation for information which enables users to quickly and easily retrieve information they need. This information can then be stored and manipulated on the users own computer which doesn’t affect the original database information.
+        - Web
+          - A website is a made of a collection of web pages which are related to certain topics. A website is also contains images, information and videos. A website is run by a web server, this is accessible by a network this includes the Internet or local area network and Wide area network as the web is used around the world and also ‘www’ (World Wide Web) shows it accessible by the world. The web allows the user to connect with the web server mainly and this may be because of sharing files again through LAN or WAN.
+        - Proxy
+          - Proxy server is a type of server which allows the user to access web pages by other computer, for example: when another computer requests a webpage it will retrieved by the proxy server and its sent to the requesting computer. Proxy Server would make the internet access work more efficiently. If the user accesses a page on the internet, that webpage would be saved on the proxy server. The proxy server would be able to find the webpage quicker from the cached memory. A proxy server works with the firewall, that that it would provide security barrier between the internet network and the internet. The benefits of proxy server is that it can speed up the browsing and access of the data in a network, another advantage for proxy server is that it can used to bypass blocked sites in schools, offices and can access to parental blocked data. The disadvantage for Proxy server is that students are able to access explicit material on the internet such as Internet pornography; another disadvantage for proxy server is that the proxy server owner look at the cache to see if they can username and passwords.
+      - Shared resources
+        - Shared Resources are resources on a network which the user can access them. These type of resources can be referred computer data, information or hardware devices, these can be accessed from a remote computer through a local area network or an intranet. This resources are on computer so that the user can gain access to them, this means that they would need to be able to connect through the network. The user can share their files to devices such as a printer. The printer server is a type of server which allows the user to print out their work and it would control the number of documents which are printed. If there are number of user want to print out work, they would need to wait in a queue. Whoever was the first user who sent their work to the printer for printing, their work would be printed first.
+        - Examples
+          - Printing
+          - Storage space
+      - Voice over IP (VoIP)
+        - VOIP is known as voice over internet protocol, this protocol is used to allow the user to make telephone calls from their computer. This protocol sends packets of data which will contain voice and its sent over the network using the Internet Protocol and the format of the voice information would be in digital format. The advantage of VOIP is that people can use Skype or Yahoo messenger to communicate with other people. For Skype, the user would be allow to call people locally for free and if they call other subscribers then they would need to pay the charges to call. Another advantage would be that its cheaper than an other hardware and software, this means that if the user wants to communicate with someone from their computer, they would need to a internet connection, sound card , speakers and microphones and these hardware’s are cheap. The disadvantage for VOIP is that there is no guarantee of the quality when they are using the internet, another disadvantage would be that if the VOIP is fully functioning, the user will have high quality sound when they are talking to them from a normal landline phone.
+      - Mobile working
+        - A mobile is an electronic telecommunications device. Mobile phones are also known as a cellular phone or cellphone. They are connected to a wireless network through radio wave as well as satellite transmissions. They provide users with voice communications, Short Message Service (SMS), Multimedia Message Service (MMS).
+        - As technology improves year by year newer mobile phones offer better facilities such the use of the internet, e-mail and instant messaging. Mobiles are used in the network to allow users to have a portable device as well as communicate with one and other on the go constantly.
+      - Authentication
+        - This is important for all users as security is important. It’s used in schools for students and staff. Used in business and companies. Large organizations will have passwords and usernames. The benefit of this is that if they have passwords and usernames is that their work is secure. Authentication can also be done in other ways such as swiping a smart card, waving a token device, or even using voice recognition and without authentication a user will not be allowed through as they are unauthorized. The network confirms the person’s details and this will determines what access the person is granted.

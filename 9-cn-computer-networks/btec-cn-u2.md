@@ -1,0 +1,213 @@
+# 2 Understand the key components used in networking
+
+  - Key components: 
+    - 1. Network devices
+    - 2. Interconnection devices
+    - 3. Connectors and Cabling
+    - 4. Software
+  - Network devices
+    - Introduction, Features and Functions of :
+      - Workstations
+      - Servers
+        "A computer or computer program which manages requests & access to a centralized resource or service in a network."
+        - Print Server
+        - Mail Server
+        - File Server
+        - Web Server
+          - A web server is a computer system that processes requests via HTTP, the basic network protocol used to distribute information on the World Wide Web.
+          - The term can refer to the entire system, or specifically to the software that accepts and supervises the HTTP requests.
+          - A Web server is a program that uses HTTP (Hypertext Transfer Protocol) to serve the files that form Web pages to users, in response to their requests, which are forwarded by their computers' HTTP clients.
+          - Dedicated computers and appliances may be referred to as Web servers as well.
+          - The process is an example of the client/server model.
+          - All computers that host Web sites must have Web server programs.
+          - Working Mechanism
+            - Browser Resolves the Domain Name to an IP Address
+              - Your web browser first needs to know which IP address the domain name www.quackit.comresolves to. If it doesn't already have this information stored in it's cache, it requests the information from one or more DNS servers (via the internet).
+              - The DNS server tells the browser which IP address the domain name resolves to (and therefore, where the website is located).
+            - Browser Requests the Full URL
+              - Now that the web browser knows which IP address the website is located at, it can request the full URL from the web server.
+            - Web Server sends the Requested Page
+              - The web server responds by sending back the requested page.
+              - If the page doesn't exist (or another error occurs), it will send back the appropriate error message.
+            - Browser Displays the Webpage
+              - Your web browser receives the page and renders it as required.
+          - Features
+            - Create one or more websites.
+            - Configure log file settings, including where the log files are saved, what data to include on the log files etc. (Log files can be used to analyse traffic etc)
+            - Configure website/directory security. For example, which user accounts are/aren't allowed to view the website, which IP addresses are/aren't allowed to view the website etc.
+            - Create an FTP site. An FTP site allows users to transfer files to and from the site.
+            - Create virtual directories, and map them to physical directories
+            - Configure/nominate custom error pages. This allows you to build and display user friendly error messages on your website. For example, you can specify which page is displayed when a user tries to access a page that doesn't exist (i.e. a 404 error).
+            - Specify default documents. Default documents are those that are displayed when no file name is specified. For example, if you open http://localhost, which file should be displayed? This is typically index.html or similar but it doesn't need to be.
+          - Some widely used webservers
+            - Apache
+              - The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows.
+              - The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+              - The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most popular web server on the Internet since April 1996.
+              - It has celebrated its 20th birthday as a project in February 2015.
+            - Apache-Tomcat Server
+            - Microsoft's Internet Information Server (IIS)
+              - Azure Server
+            - NGINX (pronounced engine X)
+            - Novell's NetWare server
+            - Google Web Server (GWS)
+            - IBM's family of Domino servers
+        - Proxy Server
+      - Network interface Cards / Controllers (NIC)
+        - A NIC is also known as
+          - Network interface controller (NIC)
+          - Network interface controller card
+          - Network card
+          - LAN card
+          - Network adapter
+          - Network adapter card (NAC).
+        - Types
+          - Ethernet NICs
+          - Wireless NICs
+        - Features
+          - A computer hardware component that allows a computer to connect to a network.
+          - Contains the electronic circuitry required to communicate in network.
+          - NICs may be used for both wired and wireless connections.
+          - Comes integrated with mother boards
+          - Provides the computer with a dedicated, full-time connection to a network.
+          - Personal computers and workstations on a local area network (LAN) typically contain a network interface card specifically designed for the LAN transmission technology.
+          -  The NIC is both a physical layer and data link layer device, as it provides physical access to a networking medium and, for IEEE 802 and similar networks, provides a low-level addressing system through the use of MAC addresses that are uniquely assigned to network interfaces.
+        - EXPLANATION
+          - In general, people refer to Ethernet-enabled cards are NICs. Wireless cards are sometimes called WNICs, but they are often just called wireless cards. However, the term "NIC" encompasses all of these items. While Ethernet ports and cards are less common than they once were, they are still important for enterprise infrastructure, and servers use them to control multiple connections and to handle a high volume of traffic.
+          - One NIC can handle a number of Ethernet connections by attaching a switch or router to it. While most people are used to standalone routers, many enterprise and server-grade routers are full servers attached to switches. In some cases, two or more NICs might be used to provide more throughput.
+          - Offices often use Ethernet connections for workstations and desktops. Ethernet cables are easier to configure than wireless cards, and they can provide better throughput in certain scenarios. As more offices move to cloud-based operations, Ethernet cables are likely to be used to prevent wireless channels from becoming congested.
+  - Interconnection devices: 
+    - Devices
+      - Hubs
+      - Router
+      - Switch
+      - Wireless Access Points
+    - Purposes, Features and Functions
+  - Connectors and cabling:
+    - Leased Line
+      - Features
+        - Private bidirectional communication line b/w 2 points upon rent.
+        - Dedicated, active connection.
+        - Connect Geographically distant units.
+        - Connection Rates
+          - Distance b/w points
+          - Speed Required
+          - Quality Ensured
+        - Premium internet connectivity
+        - Ethernet leased line, dedicated line, data circuit or private line
+      - Features Explanation
+        - A leased line is a private bidirectional or symmetric telecommunications line between two or more locations provided in exchange for a monthly rent. Sometimes known as a private circuit or data line in the UK.
+        - Unlike traditional PSTN lines it does not have a telephone number, each side of the line being permanently connected and "dedicated" to the other. Leased lines can be used for telephone, data or Internet services. Some are ringdown services, and some connect to a Private branch exchange or Router.
+        - Typically, leased lines are used by businesses to connect geographically distant offices. Unlike dial-up connections, a leased line is always active. The fee for the connection is a fixed monthly rate. The primary factors affecting the monthly fee are distance between end points and the speed of the circuit. Because the connection does not carry anybody else's communications, the carrier can assure a given level of quality.
+        - An Internet leased line is a premium internet connectivity product, normally delivered over fiber, which provides uncontended, symmetrical speeds, full-duplex. It is also known as an ethernet leased line, dedicated line, data circuit or private line.
+        - For example, a T-1 can be leased and provides a maximum transmission speed of 1.544 Mbit/s. The user can channelize the T-1 to separate the 24 DS0 circuits for voice communication, partial the T-1 for data and voice communications, or multiplex the channels into a single data circuit. Leased lines, as opposed to DSL, are being used by companies and individuals for Internet access because they afford faster data transfer rates and are cost-effective for heavy users of the Internet.
+      - Types
+        - Fibre Leased Lines
+          - Fibre Leased Lines provide a dedicated symmetric data connection by sending light over fibre optic cables. In reality, almost all leased lines use fibre for a major portion of route, particular the 'backhaul' element. However some leased lines use fibre all the way.
+          - If you've got a choice between Fibre and DSL, choose Fibre.
+          - Of all the types of leased line, Fibre leased lines offer the higest speeds.
+        - DSL Leased Lines
+          - DSL is used to provide other types of low-bandwidth leased lines. Leased lines are non-contended and symmetric, whereas most DSL connections are contended and asymmetric. However, it is possible to use a symmetric alternative to ADSL, called SDSL. This offers a higher upload speed than standard ADSL, allowing a symmetric connection to be formed.
+          - There's also a more recent version of ADSL called ADSL2+Annex M. This offers faster upload speed than traditional ADSL.It's not symmetric. However, by deliberately limiting your downstream connection, it's possible to provide symmetric connections of up to 3.5Mbps or below.
+          - ADSL and SDSL speeds drop the further you get from your exchange, so you may not be able to get the speed you want via a DSL leased line. Usually it's only used if a fibre leased line is not available.
+          - ADSL2+ Annex M and a download speed far below the capacity of the line. Most DSL services are contended. In other words, your traffic has to fight it out with other customers traffic when travelling between your local telephone exchange and your ISP's network. However, this is just a cost-driven business decision designed to reduce backhaul and IP transit costs. It is possible to get dedicated DSL connections.
+          - DSL speeds drop the further you are from your local telephone exchange. To counter this, it is possible to bond several DSL connections together to increase the maximum speeds available.
+        - MPLS Leased Lines
+          - These types of leased lines are becoming ever more popular.
+          - MPLS stands for Multi-Protocol Label Switching. It's a technology that's used for getting data from A to B by wrapping up the data (encapsulating it), sticking one or more labels on it, then deciding where stuff should be sent based on those labels.
+          - That all seems rather pointless until you consider how easily a corporate WAN could suffer from congestion.
+          - Just imagine that you had a 12 site WAN, with 11 regional sites, each with 2Mbps connections, and a head office that has a 10Mbps connection (including 4Mbps of Internet access). In theory, 22Mbps of traffic could go from the regional sites to the Head Office. Another 4Mbps would go from the Internet to Head Office. That's 26Mbps in total, a LOT more than a 10Mbps connection to Head Office could cope with.
+          - Now clearly the links aren't likely to be 100% full. But at 50% utilisation you still have 13Mbps of data trying to travel over a 10Mbps connection, and one in four packets being dropped. How should the network decide which packets to drop? Which packets should be given priority? How do you ensure that time-sensitive applications such as VoIP telephony don't suffer service degradation as a result of this network congestion?
+          - MPLS enables you to label the different types of data on your WAN so that time-sensitive data is given priority over delay-tolerant data. To move into more geeky terms, it allows you to apply different Classes of Service to different types of traffic, ensuring that the levels of latency, jitter and packet-loss experienced by each type of traffic is appropriate.
+          - MPLS is something that's delivered on top of a leased line circuit. In other words you can get an MPLS leased line that's build upon cable leased lines, or upon DSL ones, or upon a combination of them.
+    - Dedicated Line
+      - In computer networks and telecommunications, a dedicated line is a communications cable or other facility dedicated to a specific application, in contrast with a shared resource such as the telephone network or the Internet.
+      - In practice, such services may not be provided by a single, discrete, end-to-end cable, but they do provide guarantees of constant bandwidth availability and near-constant latency, properties that cannot be guaranteed for more public systems. Such properties add a considerable premium to the price charged.
+      - As more general-purpose systems have improved, dedicated lines have been steadily replaced by intranets and the public Internet, but they are still useful for time-critical, high-bandwidth applications such as video transmission.
+    - Media types:
+      - Coaxial
+      - Twisted Pair Cable
+        - STP
+        - UTP
+      - Fibre optic
+    - Wireless
+    - Mobile technology
+    - Cable/connection standards
+  - Softwares:
+    - Network Operating System
+      - A network operating system (NOS) is a computer operating system system that is designed primarily to support workstation, personal computer, and, in some instances, older terminal that are connected on a local area network (LAN).
+      - Examples
+        - Artisoft's LANtastic
+        - Banyan VINES
+        - Novell's NetWare
+        - Microsoft's LAN Manager
+      - In addition, some multi-purpose operating systems, such as Windows NT and Digital's OpenVMS come with capabilities that enable them to be described as a network operating system.
+      - A network operating system provides 
+        - printer sharing
+        - common file system and database sharing
+        - application sharing
+        - the ability to manage a network name directory, security
+        - other housekeeping aspects of a network.
+    - Virus checker
+      - Antivirus or anti-virus software (often abbreviated as AV), sometimes known as anti-malware software, is computer software used to prevent, detect and remove malicious software. Antivirus software was originally developed to detect and remove computer viruses, hence the name.
+    - Firewall
+      - A firewall is a network security system, either hardware- or software-based, that uses rules to control incoming and outgoing network traffic.
+      - A firewall acts as a barrier between a trusted network and and an untrusted network. A firewall controls access to the resources of a network through a positive control model. This means that the only traffic allowed onto the network is defined in the firewall policy; all other traffic is denied.
+      - History of firewalls
+        - Computer security borrowed the term firewall from firefighting and fire prevention, where a firewall is a barrier established to prevent the spread of fire.
+        - When organizations began moving from mainframe computers and dumb clients to the client-server model, the ability to control access to the server became a priority. Before firewalls emerged in the late 1980s, the only real form of network security was performed by access control lists (ACLs) residing on routers. ACLs determined which IP addresses were granted or denied access to the network.
+        - The growth of the Internet and the resulting increased connectivity of networks meant that this type of filtering was no longer enough to keep out malicious traffic as only basic information about network traffic is contained in the packet headers. Digital Equipment Corp. shipped the first commercial firewall (DEC SEAL in 1992) and firewall technology has since evolved to combat the increasing sophistication of cyberattacks.
+      - Types of Firewalls
+        - Packet firewalls
+          - The earliest firewalls functioned as packet filters, inspecting the packets that are transferred between computers on the Internet. When a packet passes through a packet-filter firewall, its source and destination address, protocol, and destination port number are checked against the firewall's rule set. Any packets that aren't specifically allowed onto the network are dropped (i.e., not forwarded to their destination). For example, if a firewall is configured with a rule to block Telnet access, then the firewall will drop packets destined for TCP port number 23, the port where a Telnet server application would be listening.
+          - Packet-filter firewalls work mainly on the first three layers of the OSI reference model (physical, data-link and network), although the transport layer is used to obtain the source and destination port numbers. While generally fast and efficient, they have no ability to tell whether a packet is part of an existing stream of traffic. Because they treat each packet in isolation, this makes them vulnerable to spoofing attacks and also limits their ability to make more complex decisions based on what stage communications between hosts are at.
+        - Stateful firewalls
+          - In order to recognize a packet's connection state, a firewall needs to record all connections passing through it to ensure it has enough information to assess whether a packet is the start of a new connection, a part of an existing connection, or not part of any connection. This is what's called "stateful packet inspection." Stateful inspection was first introduced in 1994 by Check Point Software in its FireWall-1 software firewall, and by the late 1990s, it was a common firewall product feature.
+          - This additional information can be used to grant or reject access based on the packet's history in the state table, and to speed up packet processing; that way, packets that are part of an existing connection based on the firewall's state table can be allowed through without further analysis. If a packet does not match an existing connection, it's evaluated according to the rule set for new connections.
+        - Application-layer firewalls
+          - As attacks against Web servers became more common, so too did the need for a firewall that could protect servers and the applications running on them, not merely the network resources behind them. Application-layer firewall technology first emerged in 1999, enabling firewalls to inspect and filter packets on any OSI layer up to the application layer.
+          - The key benefit of application-layer filtering is the ability to block specific content, such as known malware or certain websites, and recognize when certain applications and protocols -- such as HTTP, FTP and DNS -- are being misused.
+          - Firewall technology is now incorporated into a variety of devices; many routers that pass data between networks contain firewall components and most home computer operating systems include software-based firewalls. Many hardware-based firewalls also provide additional functionality like basic routing to the internal network they protect.
+        - Proxy firewalls
+          - Firewall proxy servers also operate at the firewall's application layer, acting as an intermediary for requests from one network to another for a specific network application. A proxy firewall prevents direct connections between either sides of the firewall; both sides are forced to conduct the session through the proxy, which can block or allow traffic based on its rule set. A proxy service must be run for each type of Internet application the firewall will support, such as an HTTP proxy for Web services.
+      - Firewalls in the perimeterless age
+        - The role of a firewall is to prevent malicious traffic reaching the resources that it is protecting. Some security experts feel this is an outdated approach to keeping information and the resources it resides on safe. They argue that while firewalls still have a role to play, modern networks have so many entry points and different types of users that stronger access control and security at the host is a better technological approach to network security.
+          - Virtualization strategies such as virtual desktop infrastructure can dynamically respond to different scenarios by offering tailored access control to applications, files, Web content and email attachments based on the user's role, location, device and connection. This approach to security does provide additional protection that a firewall can't, but information security requires defense-in-depth, and firewalls still offer essential low-level protection as well as important logging and auditing functions.
+    - Email Client
+      - In Internet, an email client, email reader or more formally mail user agent (MUA) is a computer program in the category of groupware environments used to access and manage a user's email. Client is meant to be a role.
+      - Client is meant to be a role. For example, a web application which provides message management, composition, and reception functions may internally act as an email client; as a whole, it is commonly referred to as webmail. Likewise, email client may be referred to a piece of computer hardware or software whose primary or most visible role is to work as an email client.
+  - Commercial systems
+    - Software eg:
+      - Mac OSX
+        - Mac OS X is a development platform that supports multiple development technologies including UNIX, Java, the proprietary Cocoa and Carbon runtime environments, and a host of open source, Web, scripting, database and development technologies.
+        - Various links
+          - Migrating from Windows to MAC OS
+            - https://www.youtube.com/watch?v=I96nVmnzUqE
+          - Learn how to use a MAC (Overall)
+            - https://www.youtube.com/watch?v=twf70Tl7piY
+      - Linux
+        - Various parts of an OS
+          - The Bootloader: The software that manages the boot process of your computer. For most users, this will simply be a splash screen that pops up and eventually goes away to boot into the operating system.
+          - The kernel: This is the one piece of the whole that is actually called “Linux”. The kernel is the core of the system and manages the CPU, memory, and peripheral devices. The kernel is the “lowest” level of the OS.
+          - Daemons: These are background services (printing, sound, scheduling, etc) that either start up during boot, or after you log into the desktop.
+          - The Shell: You’ve probably heard mention of the Linux command line. This is the shell – a command process that allows you to control the computer via commands typed into a text interface. This is what, at one time, scared people away from Linux the most (assuming they had to learn a seemingly archaic command line structure to make Linux work). This is no longer the case. With modern desktop Linux, there is no need to ever touch the command line.
+          - Graphical Server: This is the sub-system that displays the graphics on your monitor. It is commonly referred to as the X server or just “X”.
+          - Desktop Environment: This is the piece of the puzzle that the users actually interact with. There are many desktop environments to choose from (Unity, GNOME, Cinnamon, Enlightenment, KDE, XFCE, etc). Each desktop environment includes built-in applications (such as file managers, configuration tools, web browsers, games, etc).
+          - Applications: Desktop environments do not offer the full array of apps. Just like Windows and Mac, Linux offers thousands upon thousands of high-quality software titles that can be easily found and installed. Most modern Linux distributions (more on this in a moment) include App Store-like tools that centralize and simplify application installation. For example: Ubuntu Linux has the Ubuntu Software Center (Figure 1) which allows you to quickly search among the thousands of apps and install them from one centralized location.
+        - Linux is also distributed under an open source license. Open source follows the following key philosophies:
+          - The freedom to run the program, for any purpose.
+          - The freedom to study how the program works, and change it to make it do what you wish.
+          - The freedom to redistribute copies so you can help your neighbor.
+          - The freedom to distribute copies of your modified versions to others.
+        - The above are crucial to understanding the community that comes together to create the Linux platform. It is, without a doubt, an operating system that is “by the people, for the people”. These philosophies are also one of the main reasons a large percentage of people use Linux. It’s about freedom and freedom of choice.
+        - What is a “distribution?"
+        - Linux has a number of different versions to suit nearly any type of user. From new users to hard-core users, you’ll find a “flavor” of Linux to match your needs. These versions are called distributions (or, in the short form, “distros.”) Nearly every distribution of Linux can be downloaded for free, burned onto disk (or USB thumb drive), and installed (on as many machines as you like).
+        - The most popular Linux distributions are:
+          - Ubuntu Linux
+          - Linux Mint
+          - Arch Linux
+          - Deepin
+          - Fedora
+          - Debian
+          - openSUSE.
+      - Windows
