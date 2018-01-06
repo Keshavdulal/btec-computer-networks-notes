@@ -2,6 +2,11 @@
 
 ## Assignment 1: Are we safe ?
 
+#### Assessment Method : Report, Presentation
+
+#### Scenario:
+You work for the IT support department of an organisation. The managers have asked for a review of their network security procedures, starting with an overview of current threats and how to protect against them.
+
 Phase 1: an overview of current network security threats and how to protect against them.
 
 * P1: Describe how networks can be attacked.
@@ -25,15 +30,34 @@ Phase 1: an overview of current network security threats and how to protect agai
   * Length: A 2 page extensive report describing various operations of an IDS
   * Evidence: Report and Presentation.
 
+---
+
 ## Assignment 2: What's best ?
+
+#### Assessment Method : Report, Presentation
+
+#### Scenario:
+Following your report on threats, the organisation would now like a presentation on how best to minimise risks.
 
 Phase 2: how to minimise risks.
 
 * P3: Explain what an organisation can do to minimise security breaches in networked systems [SM4].
+	* The requirement for P3 is ‘explain’, which should be more than a simple description of the elements outlined in the unit content.
+
 * M2: Suggest how users can be authenticated to gain access to a networked system.
+	* For M2, a variety of authentication methods should be explained and one or more recommended for use by the organisation.
 * D2: Compare the security benefits of different cryptography techniques.
+	* D2 will require some in-depth research into cryptography techniques and a discussion of the relative benefits.s
+
+
+---
 
 ## Assignment 3: Start installing
+
+#### Assessment Method: Security plan, Observation record, Witness statement, Report
+
+#### Scenario:
+The organisation has reviewed their needs and asked you to configure their system appropriately.
 
 Phase 3: configure and test network security hardware/software.
 
