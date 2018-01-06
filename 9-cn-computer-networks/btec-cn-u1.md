@@ -63,6 +63,15 @@ A computer network, or data network, is a digital telecommunications network whi
 
 ![](../images/computer-network.jpg)
 
+## [What is an internet and how it works ?]((https://www.youtube.com/watch?v=Dxcc6ycZ73M))
+
+### Client Server Architecture
+
+1. Client
+1. Server
+1. Request
+1. Response
+
 # Types of network
 
 ## Based on Size
@@ -123,15 +132,6 @@ demand is heavy.
 The disadvantage is that even when demand is light,
 a station wishing to transmit must wait for the token,
 increasing latency.
-
-## How internet works ?
-
-### Client Server Architecture
-
-1. Client
-1. Server
-1. Request
-1. Response
 
 ## Network models
 
