@@ -30,11 +30,11 @@ build-lists: true -->
   - GRE
   - VPN
 - Application
-  - Certificates
+  - Certificates (SSL)
   - Trust memberships
 - Filtering
   - Firewalls
-  - Access control lists
+  - Access control lists ()
 - Test
   - Test for functionality
   - Test for performance
