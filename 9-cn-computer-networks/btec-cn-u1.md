@@ -17,18 +17,7 @@
 - Basic Client Server Architecture
 - Network models
   - OSI Model,
-    1. Application Layer
-    1. Presentation Layer
-    1. Session Layer
-    1. Transport Layer
-    1. Network Layer
-    1. Data Link Layer
-    1. Physical Layer
   - TCP/IP Model
-    1. Application Layer
-    1. Transport Layer
-    1. Network Layer
-    1. Physical Layer
 
 ## [1.2 Network protocols and standards](#network-protocols-and-standards)
 
@@ -49,9 +38,9 @@
 
 ## [1.3 Application layer protocols]((#application-layer-protocols))
 
+1. HTTP
 1. DNS
 1. DHCP
-1. HTTP
 1. FTP
 1. SMTP
 
@@ -137,6 +126,14 @@ increasing latency.
 
 ### OSI Model
 
+    1. Application Layer
+    1. Presentation Layer
+    1. Session Layer
+    1. Transport Layer
+    1. Network Layer
+    1. Data Link Layer
+    1. Physical Layer
+
 #### 1. Application Layer
 
 - Contains variety of protocols that are commonly used.
@@ -144,8 +141,10 @@ increasing latency.
 - Which is the basis for the World Wide Web. 
 - When a browser wants a Web page, it sends the name of the page it wants to the server hosting the page using HTTP. The server then sends the page back.
 - Other application protocols are used for
-  - file transfer (FTP)
-  - electronic mail (SMTP)
+  - DNS (Domain Name System)
+  - DHCP (Dynamic Host Configuration Protocol)
+  - FTP (File Transfer Protocol)
+  - SMTP (Simple Mail Transfer Protocol)
 
 #### 2. Presentation Layer
 
@@ -228,6 +227,11 @@ increasing latency.
 - These design issues largely deal with mechanical, electrical, and timing interfaces, as well as the physical transmission medium, which lies below the physical layer.
 
 ### TCP/IP Model
+
+    1. Application Layer
+    1. Transport Layer
+    1. Network Layer
+    1. Physical Layer
 
 #### 1. Application Layer
 
@@ -380,8 +384,36 @@ increasing latency.
 
 # Application layer protocols
 
-- 1. DNS (Domain Name Server) - Protocol
-  - DNS Lookup PROCESS
+1. HTTP
+1. DNS
+1. DHCP
+1. FTP
+1. SMTP
+
+### 1. HTTP (Hyper Text Transfer Protocol)
+  - HTTP Methods
+    - GET
+    - PUT
+    - POST
+    - PATCH
+    - DELETE
+  - HTTP Response Code
+    - 1XX - Informational
+    - 2XX - Success
+    - 3XX - Redirection
+    - 4XX - Client Errors
+    - 5XX - Server Errors
+
+  ![](../images/http-response-codes.png)
+
+### 2. DNS (Domain Name Server) - Protocol
+  - A Taxi-cab Analogy
+  ![](../images/dns-explained.png)
+  - DNS Server Levels
+    - Root Domain Servers
+    - Top Level Domain (TLD) Servers
+    - Authoratitive Name Servers
+  - DNS Lookup Process
     - Your computer asks your router for a DNS Record
     - Your router asks your ISP for a DNS Record
     - Your ISP asks the Root Name server for the Name Server.
@@ -397,12 +429,13 @@ increasing latency.
       - .com, .edu, .gov, .org, .net
     - Countries
       - .np, .in, .uk, .pk
-    - ICANN (Internet Corporation for Assigned Names and Numbers)
-    - ICANN was formed in 1998. It is a not-for-profit partnership of people from all over the world dedicated to keeping the Internet secure, stable and interoperable. It promotes competition and develops policy on the Internet’s unique identifiers.
-    - ICANN doesn’t control content on the Internet. It cannot stop spam and it doesn’t deal with access to the Internet. But through its coordination role of the Internet’s naming system, it does have an important impact on the expansion and evolution of the Internet.
-- 2. DHCP (Dynamic Host Control Protocol)
+  
+    ### DNS Spoofing
+    ![](../images/dns-spoofing.png)
+  
+### 3. DHCP (Dynamic Host Control Protocol)
   - DHCP Server
-  - DHCP Lookup
+    - A DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
   - Issue:
     - An issue that arises with automatic assignment of IP addresses from a pool is for how long an IP address should be allocated.
     - If a host leaves the network and does not return its IP address to the DHCP server, that address will be permanently lost.
@@ -410,9 +443,17 @@ increasing latency.
     - To prevent that from happening, IP address assignment may be for a fixed period of time, a technique called leasing.
     - Just before the lease expires, the host must ask for a DHCP renewal.
     - If it fails to make a request or the request is denied, the host may no longer use the IP address it was given earlier.
-- 3. HTTP (Hyper Text Transfer Protocol)
-- 4. FTP (File Transfer Protocol)
-- 5. SMTP (Simple Mail Transfer Protocol)
+  - DHCP Lookup
+    - DHCP Discover
+    - DHCP Offer
+    - DHCP Request
+    - DHCP Acknowledgment
+  ![](../images/dhcp_process_explained.jpg)
+
+  <!-- ![](../images/dhcp-offer-overview.png) -->
+
+### 4. FTP (File Transfer Protocol)
+### 5. SMTP (Simple Mail Transfer Protocol)
   - Simple Mail Transfer Protocol (SMTP) is an Internet standard for electronic mail (email) transmission.
   - First defined by RFC 821 in 1982, it was last updated in 2008 with Extended SMTP additions by RFC 5321, which is the protocol in widespread use today.
   - Although electronic mail servers and other mail transfer agents use SMTP to send and receive mail messages, user-level client mail applications typically use SMTP only for sending messages to a mail server for relaying.
