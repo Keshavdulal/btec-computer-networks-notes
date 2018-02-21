@@ -6,6 +6,10 @@
 1. [Network protocols and standards](#network-protocols-and-standards)
 1. [Application layer protocols](#application-layer-protocols)
 
+## MindNode Diagram of Chapter
+
+![](../images/mindnode/BTEC-Networks.png)
+
 ## Unit Details
 
 ## [1.1. Types of network](#types-of-network)
@@ -123,16 +127,20 @@ a station wishing to transmit must wait for the token,
 increasing latency.
 
 ## Network models
+1. OSI Model
+1. TCP/IP Mode
+
+![](../images/tcpip-vs-osi.jpg)
 
 ### OSI Model
 
     1. Application Layer
-    1. Presentation Layer
-    1. Session Layer
-    1. Transport Layer
-    1. Network Layer
-    1. Data Link Layer
-    1. Physical Layer
+    2. Presentation Layer
+    3. Session Layer
+    4. Transport Layer
+    5. Network Layer
+    6. Data Link Layer
+    7. Physical Layer
 
 #### 1. Application Layer
 
@@ -229,9 +237,9 @@ increasing latency.
 ### TCP/IP Model
 
     1. Application Layer
-    1. Transport Layer
-    1. Network Layer
-    1. Physical Layer
+    2. Transport Layer
+    3. Network Layer
+    4. Physical Layer
 
 #### 1. Application Layer
 
@@ -407,7 +415,9 @@ increasing latency.
   ![](../images/http-response-codes.png)
 
 ### 2. DNS (Domain Name Server) - Protocol
+  - [DNS - PieterExplainsTech](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)
   - A Taxi-cab Analogy
+    - Imagine yourself going to a taxi-cab and asking the taxi driver to take you to your home without mentioning your home's address. What will happen ?
   ![](../images/dns-explained.png)
   - DNS Server Levels
     - Root Domain Servers
@@ -434,6 +444,7 @@ increasing latency.
     ![](../images/dns-spoofing.png)
   
 ### 3. DHCP (Dynamic Host Control Protocol)
+  - [DHCP - PieterExplainsTech](https://www.youtube.com/watch?v=RUZohsAxPxQ)
   - DHCP Server
     - A DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
   - Issue:
@@ -453,12 +464,15 @@ increasing latency.
   <!-- ![](../images/dhcp-offer-overview.png) -->
 
 ### 4. FTP (File Transfer Protocol)
+
 ### 5. SMTP (Simple Mail Transfer Protocol)
+
   - Simple Mail Transfer Protocol (SMTP) is an Internet standard for electronic mail (email) transmission.
-  - First defined by RFC 821 in 1982, it was last updated in 2008 with Extended SMTP additions by RFC 5321, which is the protocol in widespread use today.
-  - Although electronic mail servers and other mail transfer agents use SMTP to send and receive mail messages, user-level client mail applications typically use SMTP only for sending messages to a mail server for relaying.
-  - For retrieving messages, client applications usually use either IMAP or POP3.
-  - Internet Message Access Protocol
+  ![](../images/mua-mta-mda-mua.png)
+  - SMTP -> Sends Email to nearest email server
+  - IMAP/POP3 -> Retrieves Email from email server
+  - IMAP = Internet Message Access Protocol
+  - POP3 = Post Office Protocol V3
   - SMTP communication between mail servers uses port 25.
 
 ## Transport Layer Protocols
@@ -466,7 +480,28 @@ increasing latency.
 - TCP
 - UDP
 
+### TCP
+
+### UDP
+
 ## Internet Layer Protocols
 
 - IP
 - ICMP
+
+## IP Classes
+
+IP addresses are divided into 5 classes[A-E].
+
+![](../images/ip-classes-1.png)
+![](../images/ip-classes-2.png)
+
+## External Links
+- [DNS - PieterExplainsTech](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)
+- [DHCP - PieterExplainsTech](https://www.youtube.com/watch?v=RUZohsAxPxQ)
+- [SMTP](https://www.youtube.com/watch?v=j7kMZD81hec)
+- [FTP](https://www.youtube.com/watch?v=j7kMZD81hec)
+- [IP CLASSES](http://www.vlsm-calc.net/ipclasses.php)
+- [TCP/UDP](https://www.pluralsight.com/blog/it-ops/networking-basics-tcp-udp-tcpip-osi-models)
+- [ELI The Computer Guy's Networking Series (Youtube)](https://www.youtube.com/watch?v=rL8RSFQG8do&list=PLF360ED1082F6F2A5)
+- [PieterExplainsTech (Youtube)](https://www.youtube.com/user/PieterExplainsTech/videos)

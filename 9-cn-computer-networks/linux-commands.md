@@ -12,16 +12,16 @@ Commands
   - Copy - cp
   - Move & Rename - mv
 - Basic Network Commands
-  - IFCONFIG / IPCONFIG / IWCONFIG - Dipesh
-  - PING - Manju
-  - TRACEROUTE - Ranjeet
-  - NETSTAT - Rushma
-  - DIG - Bishesh
-  - NSLOOKUP - Biplov
-  - ROUTE - Prakash
-  - HOST - Bijay
-  - ARP - AVI
-  - NMAP - Trilochan
+  - IFCONFIG / IPCONFIG / IWCONFIG
+  - PING
+  - TRACEROUTE
+  - NETSTAT
+  - DIG
+  - NSLOOKUP
+  - ROUTE
+  - HOST
+  - ARP
+  - NMAP
   - ETHTOOL
   - IWCONFIG
   - HOSTNAME
