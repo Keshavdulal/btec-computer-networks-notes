@@ -467,13 +467,20 @@ increasing latency.
 
 ### 5. SMTP (Simple Mail Transfer Protocol)
 
-  - Simple Mail Transfer Protocol (SMTP) is an Internet standard for electronic mail (email) transmission.
+#### Mailing Process on Internet
   ![](../images/mua-mta-mda-mua.png)
-  - SMTP -> Sends Email to nearest email server
-  - IMAP/POP3 -> Retrieves Email from email server
+
+  Parties Involved in Email System
+  - MUA = Mail User Agent
+  - MTA = Mail Transfer Agent
+  - MDA = Mail Delivery Agent
+
+  Protocols Involved in Email System
+  - SMTP = Simple Mail Transfer Protocol
   - IMAP = Internet Message Access Protocol
   - POP3 = Post Office Protocol V3
-  - SMTP communication between mail servers uses port 25.
+
+ Sender (MUA) uses SMTP Protocol to send email to its nearest email server (MTA). It then sends the email over bunch of other email servers (MTA). Finally when the emails reach to the destination email server (MDA) the server then notifies the client (MUA). The client visits his/her inbox and finds the email.
 
 ## Transport Layer Protocols
 
@@ -495,6 +502,12 @@ IP addresses are divided into 5 classes[A-E].
 
 ![](../images/ip-classes-1.png)
 ![](../images/ip-classes-2.png)
+
+## Intranet & Extranet
+
+## Unicast, Broadcast and Multicast
+
+## 
 
 ## External Links
 - [DNS - PieterExplainsTech](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)
