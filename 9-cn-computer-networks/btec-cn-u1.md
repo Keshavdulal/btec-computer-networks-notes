@@ -536,6 +536,18 @@ The registered ports are those from 1024 through 49151.
 IANA maintains the official list of well-known and registered ranges.
 The dynamic or private ports are those from 49152 through 65535.
 
+## Three Types of Communication Channel
+1. Simplex
+2. Half duplex
+3. Full duplex
+
+### 1) Simplex
+A simplex communication channel only sends information in one direction. For example, a radio station usually sends signals to the audience but never receives signals from them, thus a radio station is a simplex channel. It is also common to use simplex channel in fiber optic communication. One strand is used for transmitting signals and the other is for receiving signals. But this might not be obvious because the pair of fiber strands are often combined to one cable. The good part of simplex mode is that its entire bandwidth can be used during the transmission.
+### 2) Half duplex
+In half duplex mode, data can be transmitted in both directions on a signal carrier except not at the same time. At a certain point, it is actually a simplex channel whose transmission direction can be switched. Walkie-talkie is a typical half duplex device. It has a “push-to-talk” button which can be used to turn on the transmitter but turn off the receiver. Therefore, once you push the button, you cannot hear the person you are talking to but your partner can hear you. An advantage of half-duplex is that the single track is cheaper than the double tracks.
+### 3) Full duplex
+A full duplex communication channel is able to transmit data in both directions on a signal carrier at the same time. It is constructed as a pair of simplex links that allows bidirectional simultaneous transmission. Take telephone as an example, people at both ends of a call can speak and be heard by each other at the same time because there are two communication paths between them. Thus, using the full duplex mode can greatly increase the efficiency of communication.
+
 ## External Links
 - [DNS - PieterExplainsTech](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)
 - [DHCP - PieterExplainsTech](https://www.youtube.com/watch?v=RUZohsAxPxQ)
