@@ -556,12 +556,15 @@ When computers, network devices or other networks are required to be connected, 
 
 ### Hub
 A hub is to sent out a message from one port to other ports. For example, if there are three computers of A, B, C, the message sent by a hub for computer A will also come to the other computers. But only computer A will respond and the response will also go out to every other port on the hub. Therefore, all the computers can receive the message and computers themselves need to decide whether to accept the message.
+![](../images/hub.jpg)
 ￼
 ### Switch
 A switch is able to handle the data and knows the specific addresses to send the message. It can decide which computer is the message intended for and send the message directly to the right computer. The efficiency of switch has been greatly improved, thus providing a faster network speed.
+![](../images/switch.jpg)
 ￼
 ### Router
 Router is actually a small computer that can be programmed to handle and route the network traffic. It usually connects at least two networks together, such as two LANs, two WANs or a LAN and its ISP network. Routers can calculate the best route for sending data and communicate with each other by protocols.
+![](../images/router.jpg)
 ￼
 ### What Is the Difference?
 
