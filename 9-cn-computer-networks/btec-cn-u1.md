@@ -548,6 +548,32 @@ In half duplex mode, data can be transmitted in both directions on a signal carr
 ### 3) Full duplex
 A full duplex communication channel is able to transmit data in both directions on a signal carrier at the same time. It is constructed as a pair of simplex links that allows bidirectional simultaneous transmission. Take telephone as an example, people at both ends of a call can speak and be heard by each other at the same time because there are two communication paths between them. Thus, using the full duplex mode can greatly increase the efficiency of communication.
 
+## Bridging Devices on Network
+When computers, network devices or other networks are required to be connected, hubs, switches and routers are the bridges to link them together. All the three types of devices can perform the same function, and technicians sometimes may use the terms interchangeably. However, this will make people confuse whether they are the same thing or different from each other.
+1. Hub
+1. Switch
+1. Router
+
+### Hub
+A hub is to sent out a message from one port to other ports. For example, if there are three computers of A, B, C, the message sent by a hub for computer A will also come to the other computers. But only computer A will respond and the response will also go out to every other port on the hub. Therefore, all the computers can receive the message and computers themselves need to decide whether to accept the message.
+￼
+### Switch
+A switch is able to handle the data and knows the specific addresses to send the message. It can decide which computer is the message intended for and send the message directly to the right computer. The efficiency of switch has been greatly improved, thus providing a faster network speed.
+￼
+### Router
+Router is actually a small computer that can be programmed to handle and route the network traffic. It usually connects at least two networks together, such as two LANs, two WANs or a LAN and its ISP network. Routers can calculate the best route for sending data and communicate with each other by protocols.
+￼
+### What Is the Difference?
+
+#### Hub Vs. Switch
+A hub works on the physical layer (Layer 1) of OSI model while Switch works on the data link layer (Layer 2). Switch is more efficient than the hub. A switch can join multiple computers within one LAN, and a hub just connects multiple Ethernet devices together as a single segment. Switch is smarter than hub to determine the target of the forwarding data. Since switch has a higher performance, its cost will also become more expensive.
+
+#### Switch Vs. Router
+In the OSI model, router is working on a higher level of network layer (Layer 3) than switch. Router is very different from the switch because it is for routing packet to other networks. It is also more intelligent and sophisticated to serve as an intermediate destination to connect multiple area networks together. A switch is only used for wired network, yet a router can also link with the wireless network. With much more functions, a router definitely costs higher than a switch.
+
+#### Hub Vs. Router
+As mentioned above, a hub only contains the basic function of a switch. Hence, differences between hub and router are even bigger. For instance, hub is a passive device without software while router is a networking device, and data transmission form in hub is in electrical signal or bits while in router it is in form of packet.
+
 ## External Links
 - [DNS - PieterExplainsTech](https://www.youtube.com/watch?v=GlZC4Jwf3xQ)
 - [DHCP - PieterExplainsTech](https://www.youtube.com/watch?v=RUZohsAxPxQ)
@@ -558,3 +584,4 @@ A full duplex communication channel is able to transmit data in both directions 
 - [ELI The Computer Guy's Networking Series (Youtube)](https://www.youtube.com/watch?v=rL8RSFQG8do&list=PLF360ED1082F6F2A5)
 - [PieterExplainsTech (Youtube)](https://www.youtube.com/user/PieterExplainsTech/videos)
 - [TCP/UDP Port Numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+- [Hub/Switch/Router](http://www.fiber-optic-cable-sale.com/know-difference-hub-switch-router.html)
