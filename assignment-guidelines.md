@@ -2,8 +2,10 @@
 
 1. Use Google Docs to write assignments. (www.docs.google.com)
 2. Give your document a file-name in format specified below. 
-    * Rollno-CN-FirstName-LastName
-    * Example: 14-CN-Ravi-Gurung
+    > Rollno-CN-FirstName-LastName
+    
+    Example:
+    > 14-CN-Ravi-Gurung
 3. Add a Title Page as the first page.
 4. Add a Declaration Page as the second page.
 5. Start Assignments by adding scenario given to you.
@@ -26,19 +28,21 @@ Assignment Formatting Guidelines
 8. Run a plagiarism-check
 9. Give captions texts to diagrams/tables.
 10. Add Table of content of your assignment using Document Outline in the format specified below.
-  Assignment 1
+
+  > #### Document Outline
+  - Assignment 1
     - P1
     - P2
     - M1
-  Assignment 2
+  - Assignment 2
     - P3
     - P4
     - M2
     - D1
-  Assignment 3
+  - Assignment 3
     - P5
     - D2
-  Assignment 4
+  - Assignment 4
     - P6
     - M3
 11. Add Bibliography / References at the end of each assignment on new page and number them
