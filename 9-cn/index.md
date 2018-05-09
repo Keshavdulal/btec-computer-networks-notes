@@ -1,4 +1,6 @@
-# Computer Networks
+---
+title: # Computer Networks
+---
 
 ## BTEC - Unit 9
 
