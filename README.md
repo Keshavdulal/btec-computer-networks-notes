@@ -4,9 +4,9 @@ _BY KESHAV DULAL_
 
 ## Find the notes to the following subjects in this repository
 
-- [COMPUTER NETWORKS](https://github.com/Keshavdulal/btec-network-security-notes/tree/master/9-cn-computer-networks)
-- [MANGING NETWORKS](https://github.com/Keshavdulal/btec-network-security-notes/tree/master/5-mn-managing-networks)
-- [NETWORKED SYSTEM SECURITY](https://github.com/Keshavdulal/btec-network-security-notes/tree/master/32-nss-networked-systems-security)
+- [COMPUTER NETWORKS](https://github.com/Keshavdulal/btec-computer-networks-notes/tree/master/9-cn/index.md)
+- [MANGING NETWORKS](https://github.com/Keshavdulal/btec-computer-networks-notes/tree/master/5-mn/index.md)
+- [NETWORKED SYSTEM SECURITY](https://github.com/Keshavdulal/btec-computer-networks-notes/tree/master/32-nss/index.md)
 
 ## FOLDER STRUCTURE
 
