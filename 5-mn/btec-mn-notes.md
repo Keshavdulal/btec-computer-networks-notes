@@ -387,7 +387,7 @@ A network switch is a piece of hardware that allows multiple other devices to co
 
 ---
 
-# Functions of network management
+# Functions of network management [P4]
 
 1. Configuration Management
 1. Fault Management
@@ -467,6 +467,14 @@ Finally, the network needs to convert external client signals entering the optic
 - authenticating users
 - setting permissions (RWX) on a per-user basis
 
+---
+
+# Permission Types in Linux
+
+1. Read (R)
+1. Write (W)
+1. Execute (X)
+
 <!-- 4. Security management includes administrative functions such as authenticating users and setting attributes such as read and write permissions on a per-user basis. From a security perspective, the network is usually partitioned into domains, both horizontally and vertically. Vertical partitioning implies that some users may be allowed to access only certain network elements and not other network elements.
 
 For example, a local craftsperson may be allowed to access only the network elements he is responsible for and not other network elements.
@@ -477,7 +485,7 @@ For example, a user leasing a lightpath may be provided access to all the perfor
 
 ---
 
-# Goals of Fault Management
+# Goals of Fault Management [M2]
 
 1. Fault detection
   The system discovers that service delivery has been interrupted or its performance has degraded.
@@ -490,7 +498,177 @@ For example, a user leasing a lightpath may be provided access to all the perfor
 1. Problem resolution
   The source of the fault is corrected, repaired or replaced. Depending on the cause, manual intervention may be required.
 
+---
 
+# P5 Network Interrogation & Finding Network Assets and configuration
+
+- PING
+- TRACEROUTE
+- NMAP
+
+---
+
+# Regular Maintenance Activities
+
+- Backup & Restore Files
+- User Accounts creation and deltetion
+- Design & Develop login scripts
+- Virus Scans
+- File Cleanups
+
+---
+# Backup & Restore Files
+
+Many backup tools have different features that allow users to
+
+- configure the the type of backup
+- time of backup
+- what to backup
+- logging backup activities
+
+---
+
+# Backup Utilities
+
+- Rsync / Grsync
+- Fwbackups
+- Bacula
+- Backupninja
+- Simple backup Suite (sbackup)
+- Kbackup
+
+---
+
+# User Accounts creation and deletion
+
+## Useradd
+
+- Linux command line tool
+- Creates and populate a home directory for the new user.
+- Sets permissions and ownerships to home directory.
+
+<!-- - It edits /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files for the newly created User account. -->
+
+---
+
+# User Information
+
+<!-- 1. Username: User login name used to login into system. It should be between 1 to 32 charcters long.
+1. Password: User password (or x character) stored in /etc/shadow file in encrypted format.
+1. User ID (UID): Every user must have a User ID (UID) User Identification Number. By default UID 0 is reserved for root user and UID’s ranging from 1-99 are reserved for other predefined accounts. Further UID’s ranging from 100-999 are reserved for system accounts and groups.
+1. Group ID (GID): The primary Group ID (GID) Group Identification Number stored in /etc/group file.
+1. User Info: This field is optional and allow you to define extra information about the user. For example, user full name. This field is filled by ‘finger’ command.
+1. Home Directory: The absolute location of user’s home directory.
+1. Shell: The absolute location of a user’s shell i.e. /bin/bash. -->
+
+1. Username
+1. Password
+1. User ID (UID) (0-99)
+1. Group ID (GID)
+1. User Info
+1. Home Directory
+1. Shell
+
+---
+## Useradd features
+
+---
+
+#[fit] Add a New User in Linux
+
+- useradd john
+
+---
+
+#[fit] Setup Password
+
+- passwd john
+
+---
+
+#[fit] User with Different Home Directory (-d)
+
+- useradd -d /students/btec john
+
+---
+
+#[fit] Create a User with Specific User ID (-u)
+
+- useradd -u 10 john
+
+---
+
+#[fit] User with Specific Group ID (-g)
+
+- useradd -g 101 john
+
+---
+
+#[fit] Add a User to Multiple Groups (-G)
+
+- useradd -G webadmin,developer john
+
+---
+
+#[fit] Add a User without Home Directory (-M)
+
+- useradd -M john
+
+---
+
+#[fit] Create a User with Account Expiry Date (-e)
+
+- useradd -e 2018-06-30 john
+
+---
+
+#[fit] Create a User with Password Expiry Date (-f)
+
+- useradd -f 30 john
+
+---
+
+#[fit] Add a User with Custom Comments
+
+- useradd -c "John Hill" john
+
+---
+
+#[fit] Change User Login Shell
+
+- useradd -s /path/to/shell john
+
+
+---
+# Some examples of useradd
+
+1. create a user name "RAM" with expiry date one year from today with user id 19 group id 500
+
+useradd RAM -u 19 -g 500 -e 2019-06-14
+
+2. create a user name "SHYAM" with home directory "/users/tests" and user id 15
+
+useradd SHYAM -d /users/tests -u 15
+
+3. create a user name "JOHN" with expiry date one month from today with comment "one month account"
+
+useradd JOHN -e 2018-07-14 -c "one month account"
+
+4. Create a user named "DORA" with and put her on adminGang,eagleGang group
+
+useradd DORA -G admingang, eagleGang
+
+---
+
+#[fit] Design & Develop login scripts
+
+---
+
+# Virus Scans
+
+---
+
+# File Cleanups
 
 
 
