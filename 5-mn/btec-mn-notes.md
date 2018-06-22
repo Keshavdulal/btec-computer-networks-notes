@@ -297,12 +297,13 @@ A network switch is a piece of hardware that allows multiple other devices to co
 
 ## Advantages
 
--
+- Reliability
+- Ports
 
 ## Disadvantages
 
 - Single Point of failure
-
+- Cost
 
 ---
 
@@ -353,9 +354,11 @@ A network switch is a piece of hardware that allows multiple other devices to co
 # 2. Video on Demand (VOD)
 
 ---
+
 # Potential Impacts of emerging network technologies.
 
 <!-- how emerging new technologies can change the network world -->
+
 - Enhanced capabilities
   - Faster greater storage capacity
   - Improved controls
@@ -369,6 +372,7 @@ A network switch is a piece of hardware that allows multiple other devices to co
 ---
 
 # Impacts of Server Virtualization
+
 - Reduce the no of physical servers
 - Reduce the admin to server ratio
 - Less physical servers means less power consumption
@@ -517,6 +521,7 @@ For example, a user leasing a lightpath may be provided access to all the perfor
 - File Cleanups
 
 ---
+
 # Backup & Restore Files
 
 Many backup tools have different features that allow users to
@@ -570,6 +575,7 @@ Many backup tools have different features that allow users to
 1. Shell
 
 ---
+
 ## Useradd features
 
 ---
@@ -638,8 +644,8 @@ Many backup tools have different features that allow users to
 
 - useradd -s /path/to/shell john
 
-
 ---
+
 # Some examples of useradd
 
 1. create a user name "RAM" with expiry date one year from today with user id 19 group id 500
@@ -660,15 +666,144 @@ useradd DORA -G admingang, eagleGang
 
 ---
 
-#[fit] Design & Develop login scripts
+# Design & Develop login scripts
+
+<!-- https://help.ubuntu.com/community/EnvironmentVariables#A.2Fetc.2Fprofile.d.2F.2A.sh -->
 
 ---
 
-# Virus Scans
+# Scripting basics
+
+- Scripts are files containing command-line syntax
+- Script files have extension .sh
+
+---
+
+Example Scripting Files
+
+>echo "Hello world!"
+
+>echo "This is a script file that opens up google.com"
+
+>open https://www.google.com
+
+---
+
+ /etc/profile.d/
+
+---
+
+Files with the .sh extension in the "/etc/profile.d" directory get executed in following two cases.
+
+1. Upon entering a desktop session loaded by DisplayManager
+1. Upon entering a bash login shell via console or ssh (secure-shell)
+
+---
+
+1. Upon entering a desktop session loaded by DisplayManager/Desktop Manager
+
+---
+
+2. Upon entering a bash login shell via console or ssh (secure-shell)
 
 ---
 
 # File Cleanups
+
+- Disk Space Analyzers
+  - Disk Inventory X
+  - Baobab
+
+<!-- ![](../images/disk-inventory-x.jpg) -->
+<!-- ![](../images/baobab.jpeg) -->
+
+---
+
+# Performance / Fault Management Tools
+
+- SpiceWorks
+- HP Openview
+
+---
+
+# SpiceWorks
+
+- SNMP Monitoring Tool
+- Real Time Monitoring
+- Alert Mechanism
+- Performance Dashboard
+- Quick, Simple & Configurable
+
+<!-- ![](../images/snmp-screenshot-3.jpg) -->
+
+---
+
+# HP Openview
+
+- a suite of business computer management programs from Hewlett-Packard (HP)
+- Made particularly for HP 9000 and e3000 business server customers
+
+---
+
+## HP Openview features
+
+- manage applications
+- device availability
+- network conditions and status
+- system performance
+- service and program maintenance
+- storage resources
+
+---
+
+## Linux Logging 
+
+<!-- Linux logs provide a timeline of events for the Linux operating system, applications, and system, and are a valuable troubleshooting tool when you encounter issues. Essentially, analyzing log files is the first thing an administrator needs to do when an issue is discovered.
+
+For desktop app-specific issues, log files are written to different locations. For example, Chrome writes crash reports to ‘~/.chrome/Crash Reports’). Where a desktop application writes logs depends on the developer, and if the app allows for custom log configuration.
+
+Files are stored in plain-text and can be found in the /var/log directory and subdirectory. There are Linux logs for everything: system, kernel, package managers, boot processes, Xorg, Apache, MySQL. In this article, the topic will focus specifically on Linux system logs.
+
+You can change to this directory using the cd command. You’ll need to be the root user to view or access log files on Linux or Unix-like operating systems. -->
+
+### Types
+
+- Application Logs
+- Event Logs
+- Service Logs
+- System Logs
+
+<!-- - Work logs
+- Log resources used
+- System testing -->
+
+---
+
+### Default log directory
+
+/var/log/
+
+---
+
+### Common Linux log files and usage
+
+- /var/log/messages : General message and system related stuff
+- /var/log/auth.log : Authentication logs
+- /var/log/kern.log : Kernel logs
+- /var/log/maillog : Mail server logs
+- /var/log/httpd/ : Apache access and error logs directory
+- /var/log/boot.log : System boot log
+- /var/log/mysqld.log : MySQL database server log files
+- /var/log/utmp   OR   /var/log/wtmp : Login records
+
+
+<!-- # Log rotation -->
+
+<!-- Logrotate is a tool that can remove, compress and rotate your log files regularly. Logrotare is able to rotate your log files as they grow too large or even you can configure it to do it daily, monthly etc. By default Logrotate invoked daily as a cron job. -->
+
+<!-- # Syslog Server -->
+
+<!-- A Syslog server represents a central log monitoring point on a network, to which all kinds of devices including Linux or Windows servers, routers, switches or any other hosts can send their logs over a network. By setting up a Syslog server, you can filter and consolidate logs from different hosts and devices into a single location, so that you can view and archive important log messages more easily. -->
 
 
 
