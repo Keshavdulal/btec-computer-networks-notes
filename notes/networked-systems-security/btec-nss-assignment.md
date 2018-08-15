@@ -25,7 +25,7 @@ Phase 1: an overview of current network security threats and how to protect agai
   * Evidence: Report containing description.
 * M1: Explain the operation of different **Intruder Detection Systems** (IDS).
   * Research and Install a Host Based IDS on your system.
-    * Eg: Snort, Suricata, Bro, Kismet, OSSEC, Samhain, OpenDLP
+    * Eg: Snort, AlienVault, Suricata, Bro, Kismet, OSSEC, Samhain, OpenDLP
   * Document the process of operation of any IDS selected.
   * Length: A 2 page extensive report describing various operations of an IDS
   * Evidence: Report and Presentation.
