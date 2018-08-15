@@ -805,7 +805,170 @@ You can change to this directory using the cd command. You’ll need to be the r
 
 <!-- A Syslog server represents a central log monitoring point on a network, to which all kinds of devices including Linux or Windows servers, routers, switches or any other hosts can send their logs over a network. By setting up a Syslog server, you can filter and consolidate logs from different hosts and devices into a single location, so that you can view and archive important log messages more easily. -->
 
+---
 
+## VPN
+
+# Virtual Private Network
+
+Virtual Private Network, allows you to create a secure connection to another network over the Internet.
+
+---
+
+# Uses
+
+- Access a Business Network remotely
+- Access Your Home Network remotely
+- Hide Your Browsing Activity From Your Local Network and ISP
+  - Get rid of cookies based tracking
+  - Get rid of servers logging your IP
+- Access Geo-Blocked Websites
+  - Use of spotify in Nepal
+- Bypass Internet Censorship
+  - Use of vpn to access Gsuite (Google Docs, sheets etc) in China
+  
+---
+# VPN Service Providers
+
+---
+
+# VPN Service Providers
+
+- Open VPN
+- Hola VPN (free)
+- Express VPN
+- Tunnel Bear VPN
+- Strong VPN
+- Nord VPN
+
+---
+
+# FIREWALLS
+
+---
+
+## What is a firewall?
+
+> A firewall is a network security software or device that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules.
+
+---
+
+### Why do networks need a firewall?
+
+> Firewalls have been a first line of defense in network security for over 25 years. They establish a barrier between secured and controlled internal networks that can be trusted and untrusted outside networks, such as the Internet.
+
+---
+
+# Basic Types
+
+1. Hardware
+1. Software
+1. Both
+
+---
+
+# Advanced Types
+
+1. Proxy firewall
+1. Stateful inspection firewall
+1. Unified threat management (UTM) firewall
+1. Next-generation firewall (NGFW)
+1. Threat-focused NGFW
+
+---
+
+## Proxy firewall
+
+An early type of firewall device, a proxy firewall serves as the gateway from one network to another for a specific application. Proxy servers can provide additional functionality such as content caching and security by preventing direct connections from outside the network. However, this also may impact throughput capabilities and the applications they can support.
+
+---
+
+### Stateful inspection firewall
+
+Now thought of as a “traditional” firewall, a stateful inspection firewall allows or blocks traffic based on state, port, and protocol. It monitors all activity from the opening of a connection until it is closed. Filtering decisions are made based on both administrator-defined rules as well as context, which refers to using information from previous connections and packets belonging to the same connection.
+
+---
+
+# Unified threat management (UTM) firewall
+
+A UTM device typically combines, in a loosely coupled way, the functions of a stateful inspection firewall with intrusion prevention and antivirus. It may also include additional services and often cloud management. UTMs focus on simplicity and ease of use.
+
+---
+
+# Next-generation firewall (NGFW)
+
+Firewalls have evolved beyond simple packet filtering and stateful inspection. Most companies are deploying next-generation firewalls to block modern threats such as advanced malware and application-layer attacks.
+
+---
+
+According to Gartner, Inc.’s definition, a next-generation firewall (NGFW) must include:
+
+- Standard firewall capabilities like stateful inspection
+- Integrated intrusion prevention
+- Application awareness and control to see and block risky apps
+- Upgrade paths to include future information feeds
+- Techniques to address evolving security threats
+- While these capabilities are increasingly becoming the standard for most companies, NGFWs can do more.
+
+---
+
+# Threat-focused NGFW
+
+These firewalls include all the capabilities of a traditional NGFW and also provide advanced threat detection and remediation. With a threat-focused NGFW you can:
+
+- Know which assets are most at risk with complete context awareness
+- Quickly react to attacks with intelligent security automation that sets policies and hardens your defenses dynamically
+- Better detect evasive or suspicious activity with network and endpoint event correlation
+- Greatly decrease the time from detection to cleanup with retrospective security that continuously monitors for suspicious activity and behavior even after initial inspection
+- Ease administration and reduce complexity with unified policies that protect across the entire attack continuum
+
+
+---
+
+
+## Access Control List (ACL)
+
+<!-- https://www.cisco.com/c/en/us/td/docs/ios/12_2/security/configuration/guide/fsecur_c/scfacls.pdf -->
+
+<!-- http://www.orbit-computer-solutions.com/access-control-lists/ -->
+
+---
+
+## What is ACL?
+
+Access Control List (ACL) are filters that enable you to control which routing updates or packets are permitted or denied in or out of a network.
+
+---
+
+Access lists filter network traffic by controlling whether routed packets are forwarded or blocked at the
+router’s interfaces. Your router examines each packet to determine whether to forward or drop the packet,
+on the basis of the criteria you specified within the access lists.
+
+---
+
+# Uses
+
+1. Limits network traffic to increase network performance.
+1. ACLs provides traffic flow control by restricting the delivery of routing updates.
+1. It can be used as additional security.
+1. Controls which type of traffic are forwarded or blocked by the router.
+1. Ability to control areas for client access.
+
+---
+
+## Network Security Policy
+
+---
+
+## What is a Network Security Policy?
+
+A network security policy is a set of rules put in place for how data is accessed. It defines what needs protecting, what processes are critical to the success of the company, and how to ensure the company is able to do business and fulfill its mission. It includes management objectives, rules for computer users and administrators and also specifies consequences for unauthorized usage or behavior.
+
+<!-- Data needs to be protected like anything of value
+Network lock
+One of the most common general polices within a network security policy is an acceptable usage policy (AUP), which specifies how employees can utilize company computer resources, and instructs them on how to protect company resources and private information. -->
+
+---
 
 
 
