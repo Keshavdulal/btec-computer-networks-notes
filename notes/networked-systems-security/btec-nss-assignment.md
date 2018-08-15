@@ -1,4 +1,6 @@
-# Assignments
+---
+title: BTEC NSS Assignment
+---
 
 ## Assignment 1: Are we safe ?
 
