@@ -1,9 +1,13 @@
+---
+title: # 2.Security Systems
+---
+
 footer: *Networked Systems Security*
 slidenumbers: true
 autoscale: true
 build-lists: true
 
-# C2. Security Systems
+# 2. Security Systems
 
 > Know about security related hardware and software
 1. Email systems

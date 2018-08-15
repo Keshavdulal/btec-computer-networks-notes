@@ -1,7 +1,11 @@
-<!-- footer: *Networked Systems Security* -->
-<!-- slidenumbers: true -->
-<!-- autoscale: true -->
-<!-- build-lists: true -->
+---
+title: # 3.Organisational Security
+---
+
+footer: *Networked Systems Security*
+slidenumbers: true
+autoscale: true
+build-lists: true
 
 # C3. Organisational Security 🏢
 

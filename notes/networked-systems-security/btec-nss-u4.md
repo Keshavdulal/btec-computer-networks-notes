@@ -1,10 +1,12 @@
-<!-- footer: *Networked Systems Security*
+---
+title: # 4.Apply System Security
+---
+footer: *Networked Systems Security*
 slidenumbers: true
 autoscale: true
-build-lists: true -->
+build-lists: true
 
-## Chapter 4
-# Apply System Security
+# 4.Apply System Security
 
 ### Table of Content
 
@@ -178,6 +180,7 @@ GlobalSign was founded in 1996 in Europe and remains one of the longest running 
 ## Filtering
   - Firewalls
   - Access control lists
+
 ## Test
   - Test for functionality
   - Test for performance

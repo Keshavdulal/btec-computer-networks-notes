@@ -1,8 +1,8 @@
 ---
-title: # C1. Network Attacks
+title: # 1.Network Attacks
 ---
 
-# C1. Network Attacks
+# 1. Network Attacks
 
 <!-- 1 Know the types and sources of network attacks -->
 <!-- 2 Know about security related hardware and software -->
