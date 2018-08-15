@@ -5,20 +5,50 @@ title: 1.Network Attacks
 ---
 # 1. Network Attacks
 
-1. Types of Attacks
+1. What is a Network Attack?
+1. Why are Networks Attacked?
+1. Types of Network Attacks
 1. Sources of Attacks
 
-## What is an attack & Why do we do it ?
+---
+# What is a Network Attack?
 
-## Types of Attacks
+An attack is an information security threat that involves computer networks as a medium to
+- obtain
+- alter
+- destroy
+- remove
+- implant or 
+- reveal information
+without authorized access or permission.
 
-- Denial of service
-- Back door
-- Spoofing
-- Mathematical
-- Brute force
+---
+# 1. Why are Networks Attacked?
+
+- Industrial espionage
+- Politics
+- Terrorism
+- Racism
+- Criminal payoffs
+- Displeased employees
+- Name/Recoginiton/Fun
+
+---
+# Types of Attacks
+
+1. Active Attacks
+1. Passive Attacks
+
+---
+## Some common & popular attacks
+
+- Denial of service (DOS) Attack
+- Back door Attack
+- Spoofing Attack
+- Brute force Attack
 - Software exploitation Attack
 
+---
 # Denial of service Attack
 
 # Back door Attack
@@ -132,6 +162,8 @@ Static analysis can detect backdoors and other malicious insertions such as root
 
 ---
 ## External Links
+
+[Network Attacks](http://www.tech-faq.com/network-attacks.html)
 
 [Ransomware - Anatomy of an Attack](https://www.youtube.com/watch?v=4gR562GW7TI)
 
