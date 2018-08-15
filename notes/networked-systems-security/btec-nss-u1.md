@@ -1,13 +1,9 @@
 ---
-title: # 1.Network Attacks
+title: 1.Network Attacks
 ---
 
+---
 # 1. Network Attacks
-
-<!-- 1 Know the types and sources of network attacks -->
-<!-- 2 Know about security related hardware and software -->
-<!-- 3 Understand organisational aspects of network security -->
-<!-- 4 Be able to apply system security. -->
 
 1. Types of Attacks
 1. Sources of Attacks
