@@ -101,7 +101,13 @@ build-lists: true
 
 
 
+---
 
+| ENCRYPTION STANDARD | Protocol | Algorithm | Should you use it? |
+| :---: | :---: | :---: | :---: |
+| WEP | TKIP | RC4 | No |
+| WPA | TKIP | RC4 | Only if WPA2 is not available |
+| WPA2 | CCMP | AES | Yes |
 
 
 

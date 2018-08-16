@@ -176,22 +176,13 @@ Static analysis can detect backdoors and other malicious insertions such as root
 ---
 ## External Links
 
-[Network Attacks](http://www.tech-faq.com/network-attacks.html)
-
-[Ransomware - Anatomy of an Attack](https://www.youtube.com/watch?v=4gR562GW7TI)
-
-[Anatomy of an IoT Attack](https://www.youtube.com/watch?v=GvLnb4YQHh0)
-
-[The Attack](https://www.youtube.com/watch?v=CMsp8WiBxzM)
-
-[STUXNET: The Virus that Almost Started WW3](https://www.youtube.com/watch?v=7g0pi4J8auQ)
-
-[Stuxnet Malware Analysis Paper](https://www.codeproject.com/Articles/246545/Stuxnet-Malware-Analysis-Paper)
-
-[Stuxnet on Wikipedia](https://en.wikipedia.org/wiki/Stuxnet)
-
-[Classes of Malicious Software](https://www.cisco.com/c/en/us/about/security-center/virus-differences.html)
-
-[Backdoors](https://www.youtube.com/watch?v=7ZwGvFu9WhY)
-
-[Veracode](https://www.veracode.com/security/rootkit)
+- [Network Attacks](http://www.tech-faq.com/network-attacks.html)
+- [Ransomware - Anatomy of an Attack](https://www.youtube.com/watch?v=4gR562GW7TI)
+- [Anatomy of an IoT Attack](https://www.youtube.com/watch?v=GvLnb4YQHh0)
+- [The Attack](https://www.youtube.com/watch?v=CMsp8WiBxzM)
+- [STUXNET: The Virus that Almost Started WW3](https://www.youtube.com/watch?v=7g0pi4J8auQ)
+- [Stuxnet Malware Analysis Paper](https://www.codeproject.com/Articles/246545/Stuxnet-Malware-Analysis-Paper)
+- [Stuxnet on Wikipedia](https://en.wikipedia.org/wiki/Stuxnet)
+- [Classes of Malicious Software](https://www.cisco.com/c/en/us/about/security-center/virus-differences.html)
+- [Backdoors](https://www.youtube.com/watch?v=7ZwGvFu9WhY)
+- [Veracode](https://www.veracode.com/security/rootkit)
