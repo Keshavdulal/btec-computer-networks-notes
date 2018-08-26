@@ -1,46 +1,66 @@
 ---
 title: # 3.Organisational Security
+
 ---
 
-footer: *Networked Systems Security*
+<!-- footer: *Networked Systems Security*
 slidenumbers: true
 autoscale: true
-build-lists: true
+build-lists: true -->
 
-# C3. Organisational Security 🏢
+# C3. Organisational Security 
 
+---
+> Companies hire cyber secuirity experts to secure their networks.
+
+---
+1. Policies and procedures
+1. User responsibilities
+1. Education of IT professionals
+1. Physical security of system
+1. Risk assessment and reduction
+
+---
 1. Policies and procedures
     1. Monitoring
     1. Education and Training
     1. Backup and Recovery Schemes
     1. Configuring and Upgrading software
     1. Setting up file and folder permissions
+
+---
 1. User responsibilities
     1. Adherence to specific guidelines
     1. Strength of password
     1. Installation of new software
+
+---
 1. Education of IT professionals
     1. Maintenance of skills
     1. Knowledge of exploits
     1. Application of updates and patches
+
+---
 1. Physical security of system
     1. Lock and key
     1. Logging of entry
     1. Secure room environments
     1. Authentication of individual
+
+---
 1. Risk assessment and reduction
     1. Potential risks
     1. Penetration testing
     1. Security audits
 
 ---
-
 ## Policies and procedures
 
 1. Monitoring
 
 Network monitoring refers to the practice of overseeing the operation of a computer network using specialized management software tools. Network monitoring systems are used to ensure availability and overall performance of computers (hosts) and network services. They let admins monitor access, routers, slow or failing components, firewalls, core switches, client systems and server performance among other network data. Network monitoring systems are typically employed on large scale corporate and university IT networks.
 
+---
 1. Education and Training
 1. Backup and Recovery Schemes
 
@@ -55,12 +75,14 @@ Network monitoring refers to the practice of overseeing the operation of a compu
 1. Configuring and Upgrading software
 1. Setting up file and folder permissions
 
+---
 ## User responsibilities
 
 	1. Adherence to specific guidelines
 	1. Strength of password
 	1. Installation of new software
 
+---
 1. Adherence to specific guidelines
 
 	The network users are obliged to stick with the network policies in order to ensure the smooth running of network. These guidelines usually include:
@@ -69,6 +91,7 @@ Network monitoring refers to the practice of overseeing the operation of a compu
 	
 	Fair Usage Policy (also known as Fair Access Policy or Bandwidth Cap) is implemented by Internet Service Providers (ISPs) world over. A small number of customers use an excessive amount of the network bandwidth and impairs the experience of a large majority. Through this policy, ISPs seek to address this imbalance and give all users the opportunity to experience the network in the same way
 
+---
 1. Strength of password
 
 	A Strong Password should -
@@ -108,6 +131,7 @@ Network monitoring refers to the practice of overseeing the operation of a compu
 	* Do not store passwords in easily reversible form
 	* Implement automated notification of a password change or reset
 
+---
 1. Installation of new software
 
 
@@ -116,13 +140,14 @@ Installation of unauthorized computer programs and software, including files dow
 This policy's purpose is to ensure that every employee, contractor, temporary worker, and volunteer understands and agrees to abide by specific guidelines for software, program, and application installation and use on organization-provided computers, systems, and networks.
 
 	
-
+---
 ## Education of IT professionals
 
 1. Maintenance of skills
 1. Knowledge of exploits
 1. Application of updates and patches
 
+---
 ## Physical security of system
 
 1. Lock and key
@@ -130,6 +155,7 @@ This policy's purpose is to ensure that every employee, contractor, temporary wo
 1. Secure room environments
 1. Authentication of individual
 
+---
 ## Risk assessment and reduction
 
 1. Potential risks
